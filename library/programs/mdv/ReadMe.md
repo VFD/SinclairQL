@@ -71,9 +71,14 @@ La formule de maths sera expliquée.
 4150   RETurn w$
 4160 END DEFine PICKWORD
 4970 REMark ----------------------------------------
-4980 REMark DATA to chosse bellow loaded with MERGE
+4980 REMark DATA to choose bellow
 4990 REMark ----------------------------------------
 ```
+
+- s: première ligne de DATA
+- e: dernière ligne de DATA
+- p: pas d'incrément des ligne (en général 10)
+- n: tirage d'un nombre entre s et e par incrément de p
 
 
 ##### La map clavier
