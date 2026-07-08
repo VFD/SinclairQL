@@ -11,10 +11,13 @@ ___
 Mes travaux sur le Sinclair QL.\
 Machine choisi par le groupe RPUFOS pour la période juin 2026 à octobre 2026.
 
+Organisation :
+
 - library
   - documents (documents que je juge pertinents)
   - programs (mes contributions)
 
+Possible qu'à terme je cré une page html pour un équivalent site web de ce repository.
 
 ___
 ## Ressources Web
