@@ -116,9 +116,15 @@ ___
 C'est du vrac. sauf pour ma production pour la session qui est en premier.\
 
 
-#### prog
+#### Un Pendu tout simple
 
-TO DO
+L'idée est très simple.\
+Le principe est surtout de faire une sorte de démo avec le superBASIC.\
+Utiliser ses possibilité de MERGE, DLINE, RESTORE entre autre.
+
+L'intérêt est de pouvoir utiliser une base de données en DATA à la demande puis une fois la sélection faite, charger un autre programme par MERGE.
+
+On peut donc définir different type de données, dans le cadre du pendu, on peut donc demander au joueur de choisir sa série.
 
 #### prog
 
