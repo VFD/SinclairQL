@@ -14,11 +14,15 @@ Machine choisi par le groupe RPUFOS pour la pèriode juin 2026 à octobre 2026.
 ___
 ## Ressources Web
 
-### Ci-dessous les diverses ressources web trouvés concernant le Sinclair QL :
+### Ci-dessous les diverses ressources web trouvés concernant le Sinclair QL qui pourraient vous être utiles :
 
-- (Wikipedia)[https://fr.wikipedia.org/wiki/Sinclair_QL]
-- Forum QL (UK)(hébergé au US)
-- Resources de XXXX
+- Wikipedia (FR) [https://fr.wikipedia.org/wiki/Sinclair_QL]
+- Wikipedia (EN) [https://en.wikipedia.org/wiki/Sinclair_QL]
+- The Sinclair QL Forum (UK)(hébergé au US) [https://theqlforum.com/]
+- Sinclair QL Pages [https://sinclairql.net/] /!\ signalé non secure par le browser
+  - QL Documents [https://sinclairql.net/djw/docs/index.html]
+  - QL Software Downloads [https://sinclairql.net/djw/downloads.html]
+- Resources QL THE REPOSITORY [https://sinclairql.net/]
 
 
 ### Les ressources des RPUFOS :
