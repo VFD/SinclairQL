@@ -66,6 +66,7 @@ Exemple :
 110 WINDOW #3,512,256,0,0
 120 SCALE #3,256,0,0
 ```
+
 Permettra de travailler sur une fenêtre en Mode 8 512x256 (largeur, hauteur) pixels.\
 Le QL recalculera la position des pixels à allumer.\ 
 Ce qui peut impliquer des dérives d'affichage.
