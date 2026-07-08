@@ -16,7 +16,7 @@ ___
 
 ### Ci-dessous les diverses ressources web trouvés concernant le Sinclair QL :
 
-- Wikipedia
+- (Wikipedia)[https://fr.wikipedia.org/wiki/Sinclair_QL]
 - Forum QL (UK)(hébergé au US)
 - Resources de XXXX
 
