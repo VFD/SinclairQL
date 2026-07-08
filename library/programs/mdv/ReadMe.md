@@ -108,6 +108,10 @@ Permettra de travailler sur une fenêtre en Mode 8 512x256 (largeur, hauteur) pi
 Le QL recalculera la position des pixels à allumer.\
 Ce qui peut impliquer des dérives d'affichage.
 
+
+#### Les couleurs
+
+
 ___
 ## Mes listings
 
