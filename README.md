@@ -2,7 +2,7 @@
 RPUFOS Sincler QL project
 
 <p align="center">
-  <img src="assets/RPUFOS_Logo.png" alt="Logo RPUFOS" width="250" style="margin:auto;">
+  <img src="assets/img/RPUFOS_Logo.png" alt="Logo RPUFOS" width="250" style="margin:auto;">
 </p>
 
 ___
