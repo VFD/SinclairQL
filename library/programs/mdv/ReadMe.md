@@ -111,6 +111,34 @@ Ce qui peut impliquer des dérives d'affichage.
 
 #### Les couleurs
 
+TO DO
+
+PAPER a
+
+INK a,b,c
+
+Avec:
+- a : Encre
+- b : 
+- c : trame 
+
+##### Mode 4
+
+0 — noir
+2 — rouge
+4 — vert
+7 — blanc
+
+##### Mode 8
+
+0 — noir
+1 — bleu
+2 — rouge
+3 — magenta
+4 — vert
+5 — cyan
+6 — jaune
+7 — blanc
 
 ___
 ## Mes listings
@@ -124,7 +152,7 @@ C'est du vrac. sauf pour ma production pour la session qui est en premier.\
 
 L'idée est très simple.\
 Le principe est surtout de faire une sorte de démo avec le superBASIC.\
-Utiliser ses possibilité de MERGE, DLINE, RESTORE entre autre.
+Utiliser ses possibilités de MERGE, DLINE, RESTORE entre autre.
 
 L'intérêt est de pouvoir utiliser une base de données en DATA à la demande puis une fois la sélection faite, charger un autre programme par MERGE.
 
