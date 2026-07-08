@@ -33,7 +33,7 @@ ___
 ### Note préalable
 
 On voit baucoup de programme avec comme nom "nom_bas".\
-Plusiers test montrent que la structure du nom n'a pas vraiement d'importnce, le QL apparement reconnait le type de fichier.\
+Plusieurs test montrent que la structure du nom n'a pas vraiement d'importnce, le QL apparement reconnait le type de fichier.\
 Ceci implique qu'on peut juste utiliser "nom" sans rien d'autre.\
 
 Il est possible de faire le développement directement dans le répertoire avec Notepad++ par exemple, puis de faire un "lrun prog" dans l'émulateur.
@@ -50,17 +50,38 @@ Ceci est très utile dans le cas de boucle où on utilise souvent i.
 Autre point important, les fonctions et procédures sont directement exploitable dès le chargement du programme par load.
 
 ##### RESTORE N
-RESTORE accepte en paramètre un variable N.\
+RESTORE accepte en paramètre une variable N.\
 C'est très rare dans les BASICs de l'époque et c'est très utile.\
 Voir le programme "to do" qui l'utilise pour utiliser une séquence DATA aléatoirement.\
 La formule de maths sera expliquée.
+
+```basic
+4030 DEFine FuNction PICKWORD$
+4040   LOCal i, n, idx, w, s, e, p
+4050   s = 5000
+4060   e = 5010
+4070   p = 10
+4080   w = 6
+4090   n = RND(0 TO (e - s) / p) * p + s
+4100   idx = RND(1 TO w)
+4110   RESTORE n
+4120   FOR i = 1 TO idx
+4130     READ w$
+4140   END FOR i
+4150   RETurn w$
+4160 END DEFine PICKWORD
+4970 REMark ----------------------------------------
+4980 REMark DATA to chosse bellow loaded with MERGE
+4990 REMark ----------------------------------------
+```
+
 
 ##### La map clavier
 
 Il est possible de détecter l'appuis d'une touche avec KEYROW(n).\
 Avec 0<n<7.\
 Certaine docs préconise de ne pas utiliser. C'est à voir selon les cas.\
-Le problème étant que ça détecte la touche et non le caractère associé.\
+Le problème étant que ça détecte la touche et non le caractère associé.
 
 
 #### Les graphismes sur QL
