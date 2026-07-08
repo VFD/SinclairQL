@@ -21,9 +21,16 @@ Donc pour tout ce projet je considère cet émulateur comme acquis.
 
 ### Structure de mes répertoires :
 
-files
-mdv
-flp
+- QemuLator
+    - files
+        - mdv
+            - ...
+        - floppies
+            - ...
+
+
+
+Ci-après Mermaid avec TreeView, mais actuellement bug...
 
 ```mermaid
 treeView-beta
