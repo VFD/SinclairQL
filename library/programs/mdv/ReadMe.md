@@ -28,7 +28,7 @@ Pour les commandes de type save, load, ... , il ne semble pas nécessaire de pr�
 
 
 ___
-## les programmes
+## Programmer en superBASIC
 
 ### Note préalable
 
@@ -37,6 +37,8 @@ Plusiers test montrent que la structure du nom n'a pas vraiement d'importnce, le
 Ceci implique qu'on peut juste utiliser "nom" sans rien d'autre.\
 
 Il est possible de faire le développement directement dans le répertoire avec Notepad++ par exemple, puis de faire un "lrun prog" dans l'émulateur.
+
+Toujours pas trouver une méthode de "soft Reset" pour remettre la machine en état comme après un boot.
 
 #### Trucs et astuces sur le superBASIC
 
@@ -56,9 +58,22 @@ L'origine "0,0" est en bas à gauche.\
 Il y a un paramètre SCALE pour que le QL recalcule les pixels par rapport à la base 150x100.\
 Ceci quel que soit le mode choisi (MODE 4 ou MODE 8 pour un QL de base).
 
+___
+## Mes listings
 
-### Mes listings
+### introduction
+
+C'est du vrac. sauf pour ma production pour la session qui est en premier.\
+
+
+#### prog
 
 TO DO
+
+#### prog
+
+TO DO
+
+
 
 ___
