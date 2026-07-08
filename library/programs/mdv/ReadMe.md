@@ -47,6 +47,8 @@ On peut définir des fonctions et des procédures qui prennent en compte des par
 De plus le mot clé LOCAL permet de définir des variables locales qui n'interfèrent pas avec le reste du programme.\
 Ceci est très utile dans le cas de boucle où on utilise souvent i.
 
+Autre point important, les fonctions et procédures sont directement exploitable dès le chargement du programme par load.
+
 RESTORE N\
 RESTORE accepte en paramètre un variable N.\
 C'est très rare dans les BASICs de l'époque et c'est très utile.\
@@ -57,6 +59,16 @@ C'est à s'arracher les cheveux.\
 L'origine "0,0" est en bas à gauche.\
 Il y a un paramètre SCALE pour que le QL recalcule les pixels par rapport à la base 150x100.\
 Ceci quel que soit le mode choisi (MODE 4 ou MODE 8 pour un QL de base).
+
+Exemple :
+```basic
+100 MODE 8
+110 WINDOW #3,512,256,0,0
+120 SCALE #3,256,0,0
+```
+Permettra de travailler sur une fenêtre en Mode 8 512x256 (largeur, hauteur) pixels.\
+Le QL recalculera la position des pixels à allumer.\ 
+Ce qui peut impliquer des dérives d'affichage.
 
 ___
 ## Mes listings
