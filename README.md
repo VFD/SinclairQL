@@ -8,6 +8,25 @@ RPUFOS Sincler QL project
 ___
 ## Introduction
 
-TO DO
+Mes travaux sur le Sinclair QL.\
+Machine choisi par le groupe RPUFOS pour la pèriode juin 2026 à octobre 2026.
+
+___
+## Ressources Web
+
+### Ci-dessous les diverses ressources web trouvés concernant le Sinclair QL :
+
+- Wikipedia
+- Forum QL (UK)(hébergé au US)
+- Resources de XXXX
+
+
+### Les ressources des RPUFOS :
+
+- Github de xxx
+
+
+
+
 
 ___
