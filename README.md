@@ -9,12 +9,17 @@ ___
 ## Introduction
 
 Mes travaux sur le Sinclair QL.\
-Machine choisi par le groupe RPUFOS pour la pèriode juin 2026 à octobre 2026.
+Machine choisi par le groupe RPUFOS pour la période juin 2026 à octobre 2026.
+
+- library
+  - documents (documents que je juge pertinents)
+  - programs (mes contributions)
+
 
 ___
 ## Ressources Web
 
-### Ci-dessous les diverses ressources web trouvés concernant le Sinclair QL qui pourraient vous être utiles :
+### Ci-dessous les diverses ressources web trouvés concernant le Sinclair QL qui pourraient vous être utiles
 
 - Wikipedia (FR) [https://fr.wikipedia.org/wiki/Sinclair_QL]
 - Wikipedia (EN) [https://en.wikipedia.org/wiki/Sinclair_QL]
@@ -22,14 +27,16 @@ ___
 - Sinclair QL Pages [https://sinclairql.net/] /!\ signalé non secure par le browser
   - QL Documents [https://sinclairql.net/djw/docs/index.html]
   - QL Software Downloads [https://sinclairql.net/djw/downloads.html]
-- Resources QL THE REPOSITORY [https://sinclairql.net/]
+- Resources QL THE REPOSITORY [https://sinclairql.net/], idem ci-dessus mes bordélique
 
+___
+### Les ressources des RPUFOS
 
-### Les ressources des RPUFOS :
+Les ressources du groupes RPUFOS.
 
 - Github de xxx
 
-
+TO DO
 
 
 
