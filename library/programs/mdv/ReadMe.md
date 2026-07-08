@@ -42,16 +42,26 @@ Toujours pas trouver une méthode de "soft Reset" pour remettre la machine en é
 
 #### Trucs et astuces sur le superBASIC
 
-Le superBASIC est procédural.\
+##### Le superBASIC est procédural
 On peut définir des fonctions et des procédures qui prennent en compte des paramètres.\
 De plus le mot clé LOCAL permet de définir des variables locales qui n'interfèrent pas avec le reste du programme.\
 Ceci est très utile dans le cas de boucle où on utilise souvent i.
 
 Autre point important, les fonctions et procédures sont directement exploitable dès le chargement du programme par load.
 
-RESTORE N\
+##### RESTORE N
 RESTORE accepte en paramètre un variable N.\
 C'est très rare dans les BASICs de l'époque et c'est très utile.\
+Voir le programme "to do" qui l'utilise pour utiliser une séquence DATA aléatoirement.\
+La formule de maths sera expliquée.
+
+##### La map clavier
+
+Il est possible de détecter l'appuis d'une touche avec KEYROW(n).\
+Avec 0<n<7.\
+Certaine docs préconise de ne pas utiliser. C'est à voir selon les cas.\
+Le problème étant que ça détecte la touche et non le caractère associé.\
+
 
 #### Les graphismes sur QL
 
@@ -61,6 +71,7 @@ Il y a un paramètre SCALE pour que le QL recalcule les pixels par rapport à la
 Ceci quel que soit le mode choisi (MODE 4 ou MODE 8 pour un QL de base).
 
 Exemple :
+
 ```basic
 100 MODE 8
 110 WINDOW #3,512,256,0,0
@@ -68,7 +79,7 @@ Exemple :
 ```
 
 Permettra de travailler sur une fenêtre en Mode 8 512x256 (largeur, hauteur) pixels.\
-Le QL recalculera la position des pixels à allumer.\ 
+Le QL recalculera la position des pixels à allumer.\
 Ce qui peut impliquer des dérives d'affichage.
 
 ___
