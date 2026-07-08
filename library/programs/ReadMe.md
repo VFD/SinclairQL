@@ -10,6 +10,35 @@ Il n'y aura rien d'autre, il y a sufisament de site parlant du QL.
 J'ai utiliser QemuLator en version de base.
 
 ___
+## Base de travail
+
+Les émulateurs peuvent utiliser les répertoires comme des MicroDrive ou des floppy disk.\
+Il est donc possible de travailler directement sur les fichiers depuis le système hôte quel qu'il soit (*nix, Apple, Windows).
+
+J'ai fait des tests avec QemuLator, sQLux, ...\
+Au final (je suis sous Windows) j'ai choisi la version de base de QemuLator.\
+Donc pour tout ce projet je considère cet émulateur comme acquis.
+
+### Structure de mes répertoires :
+
+files
+mdv
+flp
+
+```mermaid
+treeView-beta
+    Qemulator/
+        files/
+            mdv
+                ...
+                ...
+            floppies
+                ...
+                ...
+
+```
+
+___
 ## Les Listings
 
 Ils sont réparties selon des critères obscures...
