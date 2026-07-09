@@ -30,7 +30,6 @@ Ci-après Mermaid avec "TreeView-beta" :
 ---
 config:
     treeView:
-        rowIndent: 40
         lineThickness: 3
     themeVariables:
         treeView:
@@ -40,13 +39,16 @@ config:
 ---
 
 treeView-beta
-    QLprojects/
-        mdv/ ## microdrive project
-            pendu :::highlight ## my project for RPUFOS session
-            ... ## other
-        flp/ ## floppy drive project
-            ...
-            ...
+    📂 QLprojects/
+        🖭 mdv/                    ## microdrive projects
+            📂 pendu :::highlight   ## my project for RPUFOS session
+                📄 BOOT             ## Boot program
+                📄 pendu            ## Main program 💀
+                📝 ...
+            📁 ...                  ## other project
+        💾 flp/                   ## floppy drive projects
+            📁 ...                  ## other project
+            📁 ...                  ## other project
 ```
 
 ___
