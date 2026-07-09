@@ -22,7 +22,7 @@ Possible qu'à terme je cré une page html pour un équivalent site web de ce re
 ___
 ## Ressources Web
 
-### Ci-dessous les diverses ressources web trouvés concernant le Sinclair QL qui pourraient vous être utiles
+### Ci-dessous les diverses ressources web trouvées concernant le Sinclair QL qui pourraient vous être utiles
 
 - Wikipedia (FR) [https://fr.wikipedia.org/wiki/Sinclair_QL]
 - Wikipedia (EN) [https://en.wikipedia.org/wiki/Sinclair_QL]
@@ -31,7 +31,7 @@ ___
 - Sinclair QL Pages [https://sinclairql.net/] /!\ signalé non secure par le browser
   - QL Documents [https://sinclairql.net/djw/docs/index.html]
   - QL Software Downloads [https://sinclairql.net/djw/downloads.html]
-- Resources QL THE REPOSITORY [https://sinclairql.net/], idem ci-dessus mes bordélique
+- Resources QL THE REPOSITORY [https://sinclairql.net/], idem ci-dessus mais bordélique
 - Documentación Sinclair QL (ES, EN) [https://sinclairql.speccy.org/archivo/docs/docs.htm] (last update 2016)
 - The Sinclair QL and QDOS compatible systems site [https://morloch.hd.free.fr/qdos/main.html]
 - The QDOS/SMS software repository [https://morloch.hd.free.fr/smsq/]
