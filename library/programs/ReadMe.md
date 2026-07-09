@@ -21,22 +21,16 @@ Donc pour tout ce projet je considère cet émulateur comme acquis.
 
 ### Structure de mes répertoires :
 
-- QemuLator
-    - files
-        - mdv
-            - ...
-        - floppies
-            - ...
+Je travail directement sur disque depuis QemuLator et je monte le répertoire en microdrive ou floppy selon le cas.\
+Je n'ai pas encore prévue de faire des "RAW".
 
-
-
-Ci-après Mermaid avec TreeView, mais actuellement bug en mode sombre, il faut que je design mieux le script...
+Ci-après Mermaid avec "TreeView-beta" :
 
 ```mermaid
 ---
 config:
     treeView:
-        rowIndent: 80
+        rowIndent: 40
         lineThickness: 3
     themeVariables:
         treeView:
