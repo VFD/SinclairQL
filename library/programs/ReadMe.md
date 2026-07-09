@@ -33,16 +33,26 @@ Donc pour tout ce projet je considère cet émulateur comme acquis.
 Ci-après Mermaid avec TreeView, mais actuellement bug en mode sombre, il faut que je design mieux le script...
 
 ```mermaid
-treeView-beta
-    Qemulator/
-        files/
-            mdv
-                ...
-                ...
-            floppies
-                ...
-                ...
+---
+config:
+    treeView:
+        rowIndent: 80
+        lineThickness: 3
+    themeVariables:
+        treeView:
+            labelFontSize: '14px'
+            labelColor: '#FF0000'
+            lineColor: '#0000FF'
+---
 
+treeView-beta
+    QLprojects/
+        mdv/ ## microdrive project
+            pendu :::highlight ## my project for RPUFOS session
+            ... ## other
+        flp/ ## floppy drive project
+            ...
+            ...
 ```
 
 ___
