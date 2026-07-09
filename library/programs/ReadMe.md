@@ -7,7 +7,7 @@ Réaliser dans le cadre des sessions RPUFOS (Retro Programmers United For Obscur
 Vous trouverez ici tout un tas de choses que j'ai réalisé.\
 Il n'y aura rien d'autre, il y a sufisament de site parlant du QL.
 
-J'ai utiliser QemuLator en version de base.
+J'ai utiliser [QemuLator](https://www.terdina.net/ql/q-emulator.html) en version de base.
 
 ___
 ## Base de travail
