@@ -26,5 +26,6 @@ L'idée général de BOOT c'est de lancer automatiquement votre programme, ce n'
 Non vérifier sur machine physique, sur QemuLator.\
 Pour les commandes de type save, load, ... , il ne semble pas nécessaire de préciser le suffixe "mdv...".
 
+[/library/programs/MicroDrive.md](MicroDrive.md)
 
 ___
