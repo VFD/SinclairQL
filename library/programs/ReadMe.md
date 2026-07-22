@@ -22,9 +22,10 @@ Donc pour tout ce projet je considère cet émulateur comme acquis.
 ### Structure de mes répertoires :
 
 Je travail directement sur disque depuis QemuLator et je monte le répertoire en microdrive ou floppy selon le cas.\
-Je n'ai pas encore prévue de faire des "RAW".
+Je finalise aussi via des fichier type ".mdv" qui emule le microdrive. Ce qui permet de tester plus avant pour un passage sur machine réèlle.\
+Je n'ai pas encore prévue de faire des "RAW" ou des floppies (on verra si j'ai le temps).
 
-Ci-après Mermaid avec "TreeView-beta" :
+Ci-après un "TreeView-beta" :
 
 ```mermaid
 ---
@@ -41,9 +42,10 @@ config:
 treeView-beta
     📂 QLprojects/
         🖭 mdv/                    ## microdrive projects
-            📂 pendu :::highlight   ## my project for RPUFOS session
-                📄 BOOT             ## Boot program
-                📄 pendu            ## Main program 💀
+            🖭 saveOlipix.mdv      ## jeu sous format microdrive
+            📂 saveOlipix :::highlight   ## my project for RPUFOS session
+                📄 BOOT                  ## Boot program
+                📄 main_bas              ## Main program 💀
                 📝 ...
             📁 ...                  ## other project
         💾 flp/                   ## floppy drive projects
