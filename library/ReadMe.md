@@ -21,13 +21,13 @@ Ils seront alors présent ici.
 Les programmes sont répartis en fonction du support.\
 Il existe plusieurs possibilités.
 
-- Répertoire (pour émulateurs comme QemuLator)
-- flp (fichiers format floppy)
-- mdv (fichiers format microdrive)
-- qlpack (autre format microdrive)
-- qlx (fichier disque dur)
+- [Répertoire](programs/directories) pour émulateurs comme QemuLator
+- [flp](programs/flp) fichiers format floppy
+- [mdv](programs/mdv) fichiers format microdrive
+- [qlpack](programs/qlpack) autre format microdrive
+- [qlx](programs/qlx) fichier disque dur
 
-Travaillant sur emulateur (je n'ai pas de QL) j'utilise les répertoire.\
+Travaillant sur emulateur (je n'ai pas de QL) j'utilise les répertoires.\
 je converti possiblement sur format mdv ou flp.
 
 

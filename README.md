@@ -49,10 +49,10 @@ ___
 Les ressources du groupes RPUFOS.
 
 - tomconte
-  - (QL)[https://github.com/tomconte/ql]
+  - [QL](https://github.com/tomconte/ql)
 - JgLevieux
-  - (Sinclair QL: AsmForBasic)[https://github.com/JgLevieux/RPUOS---Sinclair-QL/tree/main/AsmForBasic]
-  - (RetroImageConverter)[https://github.com/JgLevieux/RetroImageConverter]
+  - [Sinclair QL: AsmForBasic](https://github.com/JgLevieux/RPUOS---Sinclair-QL/tree/main/AsmForBasic)
+  - [RetroImageConverter](https://github.com/JgLevieux/RetroImageConverter)
 - ...
 
 TO DO
