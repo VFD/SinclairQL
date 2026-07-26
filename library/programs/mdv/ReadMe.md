@@ -4,8 +4,6 @@ ___
 ## Introduction
 
 Enssemble des programmes que j'ai fait pour le Sinclair QL.\
-Contient de nombreux tests pour évaluer le potentiel de la machine.\
-Un gros casse-tête c'est les modes graphiques.
 
 NB : Pour QemuLator, lors du mount, il n'est pas necessire que le répertoire s'appel "mdv...", n'importe quel nom convient.\
 C'est selon vos méthodes de travail.
@@ -49,6 +47,7 @@ Là on peut utiliser le ".".
 
 <p align="center">────────────────────</p>
 
-Pour plus de détails voir [MicroDrive.md](/library/programs/MicroDrive.md)
+Pour plus de détails voir mes notes [MicroDrive.md](/library/programs/MicroDrive.md)
+
 
 ___

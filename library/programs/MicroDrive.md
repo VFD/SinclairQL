@@ -33,7 +33,7 @@ Utilisation :
 .\New-BlankMdvImage.ps1 -OutputPath "D:\QL\rpufos.mdv" -MediumName "rpufos"
 ```
 
-La commande cré un fichier "rpufos.mdv" dans le répertoire spécifié nommé "rpufos".\
+La commande crée un fichier "rpufos.mdv" dans le répertoire spécifié nommé "rpufos".\
 Le MediumName c'est 10 caractères max.
 
 On verra si je fais plus tard un JavaScript explorateur/créateur/manipulateur de microdrive.
@@ -51,7 +51,7 @@ format mdv2_nom_volume
 
 C'est obligatoire une fois le BLANK créée ou copié.
 
-Le numero correspond au numéro de microdrive (de 1 à 8).\
+Le numéro correspond au numéro de microdrive (de 1 à 8).\
 Selon où vous l'avez placé.
 
 ```basic
@@ -59,7 +59,7 @@ dir mdv2_
 ```
 
 Pour voir le contenu.\
-Vous devrier alors avoir le message :
+Vous devriez alors avoir le message :
 
 ```
 nom_volume
@@ -125,11 +125,14 @@ Ils sont dans le répertoire "_blank".
 
 #### blank.mdv
 
-Ce fichier est totalement vierge. Il est nécessaire de le formater via la commande vu précédement.
+Ce fichier est totalement vierge.\
+Il est nécessaire de le formater via la commande vu précédement.
 
 #### boot.mdv
 
 Ce microdrive est formaté et contient le fichier BOOT décrit précédement.\
-Reste à le renommer. WTF ?
+Reste à le renommer.\
+Car je n'ai toujours pas réussi à faire un rename sans écraser les données.
+
 
 ___

@@ -41,16 +41,23 @@ config:
 
 treeView-beta
     📂 QLprojects/
-        🖭 mdv/                    ## microdrive projects
-            🖭 saveOlipix.mdv      ## jeu sous format microdrive
-            📂 saveOlipix :::highlight   ## my project for RPUFOS session
-                📄 BOOT                  ## Boot program
-                📄 main_bas              ## Main program 💀
-                📝 ...
-            📁 ...                  ## other project
-        💾 flp/                   ## floppy drive projects
-            📁 ...                  ## other project
-            📁 ...                  ## other project
+        💾 flp/								## floppy drive projects
+            📁 ...								## other project
+            📁 ...								## other project
+		🖭 mdv/								## microdrive projects
+            🖭 saveOlipix.mdv					## jeu sous format microdrive
+            📂 saveOlipix :::highlight			## my project for RPUFOS session
+                📄 BOOT 							## Boot program
+                📄 main_bas						## Main program 💀
+                📝 ...							## Other file
+            📁 ...          			        ## other project
+		🖭 mdvraw/							## microdrive projects
+			📁 ...          			        ## other project
+		📁 qlpack          			        ## QLpack project
+			📁 ...          			        ## other project
+		📁 qlx          			        ## QLx (HD drive) project
+			📁 ...          			        ## other project
+
 ```
 
 ___

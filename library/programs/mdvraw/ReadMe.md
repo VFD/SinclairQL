@@ -1,10 +1,9 @@
-# Format floppy
-
+# Format RAW des microdrives
 
 ___
 ## Introduction
 
-Fichier format floppy pour émulateur.
+Autre format pour émulateur.
 
 <p align="center">────────────────────</p>
 
