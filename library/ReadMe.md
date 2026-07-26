@@ -21,7 +21,7 @@ Ils seront alors présent ici.
 Les programmes sont répartis en fonction du support.\
 Il existe plusieurs possibilités.
 
-- [Répertoire](programs/directories) pour émulateurs comme QemuLator
+- [directories](programs/directories) Répertoire pour émulateurs comme QemuLator
 - [flp](programs/flp) fichiers format floppy
 - [mdv](programs/mdv) fichiers format microdrive
 - [qlpack](programs/qlpack) autre format microdrive

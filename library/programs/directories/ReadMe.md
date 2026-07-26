@@ -17,12 +17,5 @@ C.à.d utilisation de "nom_bas".
 Normalement c'est pareil si on bascule sur floppy disk (flp) ou hard drive (QXL).\
 Je n'ai pas encore utilisé les QLpack.
 
-<p align="center">────────────────────</p>
-
-copie d'un directory vers un microdrive :
-
-```basic
-to do
-```
 
 ___
