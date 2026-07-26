@@ -25,7 +25,7 @@ Je travail directement sur disque depuis QemuLator et je monte le répertoire en
 Je finalise aussi via des fichier type ".mdv" qui emule le microdrive. Ce qui permet de tester plus avant pour un passage sur machine réèlle.\
 Je n'ai pas encore prévue de faire des "RAW" ou des floppies (on verra si j'ai le temps).
 
-Ci-après un "TreeView-beta" via (Mermaid)[https://mermaid.ai/] :
+Ci-après un "TreeView-beta" via [Mermaid](https://mermaid.ai/) :
 
 ```mermaid
 ---
