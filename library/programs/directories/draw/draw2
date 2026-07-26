@@ -1,0 +1,38 @@
+5 REMark === RPUFOS Logo Test Program ===
+10 MODE 8
+12 REMark OPEN #3,CON_512x256a0x0
+15 OPEN #3,SCR
+16 WINDOW #3,512,256,0,0
+17 SCALE #3,256,0,0
+20 PAPER #3,0: CLS #3
+25 PAPER #1,0: INK #1,7: CLS #1
+30 PRINT #1,"test draw"
+40 p_rpufos 20,20,3
+100 INK #3,6
+110 LINE #3,0,0 TO 149,100
+120 LINE #3,0,0 TO 0,256 TO 255,255 TO 255,0 TO 0,0
+130 INK #3,2: POINT #3, 0, 256
+140 INK #3,4: POINT #3, 0, 255
+9997 PAUSE
+9998 CLOSE #3
+9999 STOP
+10000 REMark ------------------------------
+10010 REMark RPUFOS Logo - Relative draw
+10020 REMark Draws a UFO shape using LINE_R
+10030 REMark Parameters:
+10035 REMark   x0,y0 = start position
+10037 REMark   c     = channel number
+10040 REMark ------------------------------
+10050 DEFine PROCedure p_rpufos(x0,y0,c)
+10060   INK #c,7: FILL #c,1
+10070   POINT #c,x0-1,y0-1: LINE_R #c, 40,0 TO 0,40 TO -40,0 TO 0,-40
+10075   FILL #c,0
+10080   INK #c,2: FILL #c,1
+10090   PRINT #1 !x0!y0
+10100   POINT #c,x0,y0: LINE_R #c,38,0 TO 0,38 TO -38,0 TO 0,-38
+10110   FILL #c,0
+10120   PRINT #1 !x0!y0
+11000   INK #c,0: POINT #c,x0,y0: LINE_R #c TO 40,40
+11010   INK #c,1: POINT #c,x0,y0: LINE_R #c TO 38,0
+18999   REMark 
+19000 END DEFine p_rpufos

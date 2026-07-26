@@ -23,11 +23,15 @@ L'idée général de BOOT c'est de lancer automatiquement votre programme, ce n'
 
 Mais c'est beaucoup mieux quand on fait un microdrive.
 
+Dans le répertoire "_blank" il y en a un vierge pour démo.\
+Jouez avec pour tester.
+
+<p align="center">────────────────────</p>
 
 ### Les appels "mdv_"
 
 Non vérifier sur machine physique, testé sur QemuLator.\
-Pour les commandes de type save, load, ... , il ne semble pas nécessaire de préciser le suffixe "mdv...".
+Pour les commandes de type save, load, ... , il ne semble pas nécessaire de préciser le suffixe "mdv..." si on est sur le slot 1.
 
 ```basic
 lrun monProg_bas
@@ -43,7 +47,7 @@ lrun "monProg.bas"
 Là on peut utiliser le ".".
 
 
-___
+<p align="center">────────────────────</p>
 
 Pour plus de détails voir [MicroDrive.md](/library/programs/MicroDrive.md)
 

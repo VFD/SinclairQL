@@ -3,41 +3,86 @@
 ___
 ## Introduction
 
-Comme j'utilise QemuLator, je e base sur celui-ci pour traiter les microdrive.
+Comme j'utilise QemuLator, je me base sur celui-ci pour traiter les microdrive.\
+Soit les fichiers standard ".mdv" soit le nouveau ".qlpack".
+
+Je n'ai pas encore testé ce dernier.
+
+Ceci explique pourquoi ce fichier est au niveau du répertoire "programme" et non en dessous.
 
 ___
 ## Manipulation des microdrives
 
+Quelques infos pour manipuler les microdrives.
+
+<p align="center">────────────────────</p>
 
 ### Création de fichier .mdv
 
 Pas évident à faire.\
-J'ai donc créée avec mon amie IA un script PowerShell (5.1 mini) pour créer un BLANK.mdv.
+J'ai donc créée avec mon amie IA un script PowerShell (5.1 mini) pour créer un "BLANK.mdv".
 
 Le script prend des paramètres pour le nom du fichier et son nommage interne sur QL.\
 C'est AS IS, sans plus, mais ça rend le service pour avoir un mdv.
 
-Le PowerShell est fourni.
+Le PowerShell est fourni, il est dans le [répertoire mdv](/library/programs/mdv).
+
+Utilisation :
+
+```powershell
+.\New-BlankMdvImage.ps1 -OutputPath "D:\QL\rpufos.mdv" -MediumName "rpufos"
+```
+
+La commande cré un fichier "rpufos.mdv" dans le répertoire spécifié nommé "rpufos".\
+Le MediumName c'est 10 caractères max.
+
+On verra si je fais plus tard un JavaScript explorateur/créateur/manipulateur de microdrive.
+
+
+<p align="center">────────────────────</p>
 
 ### Formater un mdv
 
 Sur le QL:
 
+```basic
+format mdv2_nom_volume
 ```
-FORMAT mdv1_nom_volume
+
+C'est obligatoire une fois le BLANK créée ou copié.
+
+Le numero correspond au numéro de microdrive (de 1 à 8).\
+Selon où vous l'avez placé.
+
+```basic
+dir mdv2_
 ```
 
-Le numero correspond au numéro de microdrive (de 1 à 8).
+Pour voir le contenu.\
+Vous devrier alors avoir le message :
+
+```
+nom_volume
+253/255 sectors
+```
 
 
-### Copier de - vers
+
+<p align="center">────────────────────</p>
+
+### Copier un fichier
 
 Sur le QL :
 
+```basic
+copy "nom.bas" to mdv2_nom_bas
+```
 
-```
-To do
-```
+Sous condition d'avoir monter le directory en 1 et le blank microdrive en 2.\
+Par défaut prend le slot 1.
+
+
+<p align="center">────────────────────</p>
 
 ### Le fichier BOOT
 
@@ -46,7 +91,10 @@ On check sur quel drive on est, puis on lance.
 
 Au passage, on SET les variables DATA_USE et PROG_USE.
 
-À adapter à son cas d'usage.
+À adapter à son cas d'usage.\
+Ici on test les microdrive 1 et 2 puis les floppies 1 et 2.\
+Il est plutôt rare d'avoir plus sur un vrai QL.
+
 
 ```basic
 100 REMark --- Universal BOOT ---
@@ -68,5 +116,20 @@ Au passage, on SET les variables DATA_USE et PROG_USE.
 340 LRUN drv$ & prog$ : REMark Launch the prog
 ```
 
+
+<p align="center">────────────────────</p>
+
+### Les microdrives vierge fournis
+
+Ils sont dans le répertoire "_blank".
+
+#### blank.mdv
+
+Ce fichier est totalement vierge. Il est nécessaire de le formater via la commande vu précédement.
+
+#### boot.mdv
+
+Ce microdrive est formaté et contient le fichier BOOT décrit précédement.\
+Reste à le renommer. WTF ?
 
 ___

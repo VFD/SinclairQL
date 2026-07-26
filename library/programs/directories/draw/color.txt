@@ -1,0 +1,9 @@
+LOGO rpufos
+0:noir
+R:rouge
+V:vert
+J:jaune
+M:Violet
+B:Bleu
+ESPACE: fond blanc
+

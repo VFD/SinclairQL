@@ -1,0 +1,21 @@
+4000 REMark ----------------------------------------
+4010 REMark Random choose a word in the DATA
+4020 REMark ----------------------------------------
+4030 DEFine FuNction PICKWORD$
+4040   LOCal i, n, idx, w, s, e, p
+4050   s = 5000
+4060   e = 5010
+4070   p = 10
+4080   w = 6
+4090   n = RND(0 TO (e - s) / p) * p + s
+4100   idx = RND(1 TO w)
+4110   RESTORE n
+4120   FOR i = 1 TO idx
+4130     READ w$
+4140   END FOR i
+4150   RETurn w$
+4160 END DEFine PICKWORD
+4970 REMark ----------------------------------------
+4980 REMark TO DO
+4990 REMark ----------------------------------------
+5000 DATA "CHIEN","CHAT","SERPENT","ELEPHANT","GIRAFE","POULPE"
