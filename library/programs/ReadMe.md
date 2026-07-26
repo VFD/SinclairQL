@@ -41,7 +41,7 @@ config:
 
 treeView-beta
     📂 QLprojects/
-        💾 directories/						## Directory for projects
+        📁 directories/						## Directory for projects
             📁 memory :::highlight				## Adaptation d'un jeu (en cours)
                 📄 BOOT 								## Boot program
                 📄 memory.bas						## Main program
