@@ -25,7 +25,7 @@ Je travail directement sur disque depuis QemuLator et je monte le répertoire en
 Je finalise aussi via des fichier type ".mdv" qui emule le microdrive. Ce qui permet de tester plus avant pour un passage sur machine réèlle.\
 Je n'ai pas encore prévue de faire des "RAW" ou des floppies (on verra si j'ai le temps).
 
-Ci-après un "TreeView-beta" :
+Ci-après un "TreeView-beta" via (Mermaid)[https://mermaid.ai/] :
 
 ```mermaid
 ---
@@ -41,6 +41,11 @@ config:
 
 treeView-beta
     📂 QLprojects/
+        💾 directories/						## Directory for projects
+            📁 memory							## Adaptation d'un jeu (en cours)
+                📄 BOOT 							## Boot program
+                📄 memory						## Main program
+            📁 ...								## other project
         💾 flp/								## floppy drive projects
             📁 ...								## other project
             📁 ...								## other project
@@ -60,6 +65,9 @@ treeView-beta
 
 ```
 
+Pour vous graphe ou autre je vous recommande fortement (Mermaid)[https://mermaid.ai/].\
+Je vous authorise à reprendre mon code ci-dessus.
+
 ___
 ## Les Listings
 
@@ -67,6 +75,8 @@ Ils sont réparties selon des critères obscures...
 
 - mdv : Microdrive (en principe max 128ko)
 - flp : Floppy disk (720Ko à 1.4Mo selon dispositif)
+- ... : etc.
+
 
 To be continued...
 
