@@ -3,9 +3,9 @@
 ___
 ## Introduction
 
-TO DO.
+Ensemble de notes concernant la programmation en superBASIC pour le sinclair QL.\
+J'ai mis des exemples utiles dans le répertoire "directories", on peut les merger via la commande "MERGE".
 
-à remanier.
 
 ### Note préalable
 
@@ -26,6 +26,12 @@ Toujours pas trouver une méthode de "soft Reset" pour remettre la machine en é
 On peut définir des fonctions et des procédures qui prennent en compte des paramètres.\
 De plus le mot clé LOCAL permet de définir des variables locales qui n'interfèrent pas avec le reste du programme.\
 Ceci est très utile dans le cas de boucle où on utilise souvent i.
+
+```basic
+to do
+```
+
+Si i est déjà utilisé dans le programme, ce i n'interfère pas.
 
 Autre point important, les fonctions et procédures sont directement exploitable dès le chargement du programme par load.
 
