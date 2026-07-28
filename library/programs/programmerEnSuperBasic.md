@@ -21,22 +21,6 @@ Toujours pas trouver une méthode de "soft Reset" pour remettre la machine en é
 
 ### Trucs et astuces sur le superBASIC
 
-<p align="center">────────────────────</p>
-
-#### Rappel pour les couleurs
-
-| Value | MODE 8 colour | MODE 4 colour |
-|-------|---------------|---------------|
-| 0     | black         | black |
-| 1     | blue          | black (should be avoided) |
-| 2     | red           | red |
-| 3     | magenta       | red (should be avoided) |
-| 4     | green         | green |
-| 5     | cyan          | green (should be avoided) |
-| 6     | yellow        | white (should be avoided) |
-| 7     | white         | white |
-
-<p align="center">────────────────────</p>
 
 #### Le superBASIC est procédural
 On peut définir des fonctions et des procédures qui prennent en compte des paramètres.\
@@ -112,38 +96,63 @@ Ce qui peut impliquer des dérives d'affichage.
 
 #### Les couleurs
 
-TO DO
+Tableau des couleurs :
+
+| Value | MODE 8 colour | MODE 4 colour |
+|-------|---------------|---------------|
+| 0     | black         | black |
+| 1     | blue          | black (should be avoided) |
+| 2     | red           | red |
+| 3     | magenta       | red (should be avoided) |
+| 4     | green         | green |
+| 5     | cyan          | green (should be avoided) |
+| 6     | yellow        | white (should be avoided) |
+| 7     | white         | white |
+
+<p align="center">────────────────────</p>
 
 PAPER a
 
-INK a,b,c
+INK [#ch,] c1 [ [,c2] [, pattern] ]
 
 Avec:
-- a : Encre
-- b : 
-- c : trame 
+- #ch : canal (channel)
+- c1 : Encre 1
+- c2 : Encre 2
+- pattern : trame utilise nécessairement c1 et c2
+
+Sans pattern, c1 et c2 font un mixte des 2.
+
+TO DO: un programme exemple.
+
+Valeurs de pattern :
+
+|Value | Pattern |
+|------|---------|
+| 0    | Dots |
+| 1    | Horizontal stripes |
+| 2    | Vertical stripes |
+| 3    | Checkerboard |
+
+
 
 <p align="center">────────────────────</p>
 
-#### Mode 4
 
-- 0 — noir
-- 2 — rouge
-- 4 — vert
-- 7 — blanc
+#### Problèmes sur LINE et LINE_R
 
-<p align="center">────────────────────</p>
+Il y a un soucis dans la doc concernant ces 2 fonctions.\
+L'écriture avec le channel.
 
-#### Mode 8
+il faut :
 
-- 0 — noir
-- 1 — bleu
-- 2 — rouge
-- 3 — magenta
-- 4 — vert
-- 5 — cyan
-- 6 — jaune
-- 7 — blanc
+LINE [#chan] [, x,y] [TO x1,y1] *[[;xi,yi] [TO xj,yj] ]*
+
+```basic
+LINE #1 TO 100,100
+```
+
+Il y a un problème avec cette foutue ","...
 
 ___
 ## Mes listings
