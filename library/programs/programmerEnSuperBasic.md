@@ -122,10 +122,17 @@ alors 512 vaut ?
 
 512 x 100 / 200 = 256 ?  Non Non !
 
-le ration est : 2,694736842105263
+La largeur est 190 pixels. on travail sur du 100x190 pixels.
 
-la largeur est 190 pixels. on travail sur du 100x190 pixels.
+J'ai modifié le code source de SCALE d'une doc pour en faire le programme d_scale.bas.\
+On se base sur l'écran de base du QL soit 512x256.\
+Vous donnez la dimension de votre fenêtre et un SCALE.\
+Vous obtiendrez le X max affichable.\
+Le Y max étant toujours la valeur du SCALE.
 
+NDR :
+- La formule c'est pas moi
+- il faudrait prendre en compte la position de l'origine de SCALE (qui est actuellement 0,0)
 
 ##### l'origine des fenêtres
 
