@@ -24,13 +24,20 @@ La procédure utilise 4 paramètres :
 
 Voir aussi dans l'aide de programmation l'utilisation du SCALE qui est très particulière.
 
+EN COURS.
+
 ### p_screen_reset
 
 Met tout l'écran en noir.\
-Passe le stylo en vert (comme dans l'ancien temps des bon vieux moniteur).
+Passe le stylo en vert (comme dans l'ancien temps des bons vieux moniteurs).
 
 La ligne 32080, définie la fenêtre principale (ch #1) sans empiéter sur la console (#0).\
 La ligne 32090 prend tout l'écran.
+
+
+### d_scale.bas
+
+Pour comprendre SCALE et obtenir la valeur du X max de votre fenêtre.
 
 
 
