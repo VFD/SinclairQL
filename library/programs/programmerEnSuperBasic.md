@@ -81,22 +81,58 @@ Le problème étant que ça détecte la touche et non le caractère associé.
 
 ### Les graphismes sur QL
 
+#### la base pour comprendre
+
 C'est à s'arracher les cheveux.\
-L'origine "0,0" est en bas à gauche.\
-Il y a un paramètre SCALE pour que le QL recalcule les pixels par rapport à la base 150x100.\
+L'origine "0,0" est en bas à gauche de la fenêtre.\
+Il y a un paramètre SCALE pour que le QL recalcule les pixels par rapport à la base 100.\
 Ceci quel que soit le mode choisi (MODE 4 ou MODE 8 pour un QL de base).
 
-Exemple :
+Comprendre que basiquement l'écran fait toujours 512x256 pixels. Oui c'est bizzare...\
+Quand on définie une fenêtre, la position est par rapport à en haut à gauche.\
+
+Donc :
 
 ```basic
 100 MODE 8
-110 WINDOW #3,512,256,0,0
-120 SCALE #3,256,0,0
+110 WINDOW #3,150,100,10,10
 ```
+Créer une fenêtre sur le canal 3.\
+Dimension x: 150 (largeur). \
+Dimension y: 100 (hauteur).\
+Position 10,10 depuis en haut à gauche.
 
-Permettra de travailler sur une fenêtre en Mode 8 512x256 (largeur, hauteur) pixels.\
-Le QL recalculera la position des pixels à allumer.\
-Ce qui peut impliquer des dérives d'affichage.
+Tout ça fait des confusions et peut impliquer des dérives d'affichage.
+
+Si on ne précise pas de canal, c'est la fenêtre principale qui est modifiée, en clair, le canal #1.\
+Une fonction appelée sans numéro de canal, c'est pour la fenêtre #1.
+
+CLS c'est pareil que CLS #1. PAPER 3 c'est pareil que PAPER #1,3.
+
+#### Et le SCALE dans ce boxon ?
+
+Le SCALE de base c'est 100. La hauteur de la fenêtre vaut 100 de base quoi que vous ayez définie.\
+Par exemple 512x200, alors un POINT 0,0 c'est en bas à gauche et POINT 0,100 c'est en haut à gauche.\
+Ce malgré que ce soit 200 la valeur.
+
+Que se passe t-il sur X ?
+
+Si 200 vaut 100\
+alors 512 vaut ?
+
+512 x 100 / 200 = 256 ?  Non Non !
+
+le ration est : 2,694736842105263
+
+la largeur est 190 pixels. on travail sur du 100x190 pixels.
+
+
+##### l'origine des fenêtres
+
+Les x,y de SCALE donne l'origine de l'axe en bas à gauche de la fenêtre.\
+10,10 implique que le coin bas, gauche à pour coordonnées 10,10.
+
+
 
 <p align="center">────────────────────</p>
 
