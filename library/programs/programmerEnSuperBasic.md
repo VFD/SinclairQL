@@ -21,6 +21,23 @@ Toujours pas trouver une méthode de "soft Reset" pour remettre la machine en é
 
 ### Trucs et astuces sur le superBASIC
 
+<p align="center">────────────────────</p>
+
+#### Rappel pour les couleurs
+
+| Value | MODE 8 colour | MODE 4 colour |
+|-------|---------------|---------------|
+| 0     | black         | black |
+| 1     | blue          | black (should be avoided) |
+| 2     | red           | red |
+| 3     | magenta       | red (should be avoided) |
+| 4     | green         | green |
+| 5     | cyan          | green (should be avoided) |
+| 6     | yellow        | white (should be avoided) |
+| 7     | white         | white |
+
+<p align="center">────────────────────</p>
+
 #### Le superBASIC est procédural
 On peut définir des fonctions et des procédures qui prennent en compte des paramètres.\
 De plus le mot clé LOCAL permet de définir des variables locales qui n'interfèrent pas avec le reste du programme.\
