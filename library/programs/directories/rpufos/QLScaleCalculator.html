@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- ============================================================ -->
+	<!-- HEAD -->
+	<!-- ============================================================ -->
+	<head>
+		<!-- Meta information -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="VincentD">
+
+		<!-- Page title -->
+		<title>RPUFOS title</title>
+
+		<!-- CSS stylesheet -->
+		<link rel="stylesheet" href="css/styles.css">
+		<!-- <link rel="stylesheet" href="css/css.css"> -->
+
+<style>
+pre {
+	background-color: #000;
+	color: #00FF00;
+	border: 1px solid #ddd;
+	padding: 1em;
+	border-radius: 1em;
+	font-family: consolas, monospace;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	text-align: left !important;
+	tab-size: 0 !important;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+	
+.hr33 {
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hr50 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hr66 {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hr75 {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+	
+</style>
+
+
+		<!-- CSS if FOUC -->
+		<!--
+		<link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="style.css"></noscript>
+		-->
+
+		<!-- Favicon (optional) -->
+		<link rel="icon" href="Logos/RPUFOS_Logo.ico" type="image/x-icon">
+
+		<!-- Scripts -->
+		<!-- <script src="js/script.js" defer></script> -->
+		
+		
+<!-- ============================================================ -->
+<!-- JAVASCRIPT -->
+<!-- ============================================================ -->
+<script>		
+// --------------------------------------------------
+// collapsible zone
+// --------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".collapsible").forEach(trigger => {
+    trigger.addEventListener("click", () => {
+      trigger.classList.toggle("is-open");
+    });
+  });
+});
+</script>
+
+<script>
+// --------------------------------------------------
+// SCALE Factor calculator
+// --------------------------------------------------
+
+        function calculate() {
+            // values
+            const screenWidth = parseFloat(document.getElementById("ScreenWidth").value);
+            const screenHeight = parseFloat(document.getElementById("ScreenHeight").value);
+            const windowWidth = parseFloat(document.getElementById("WindowWidth").value);
+            const windowHeight = parseFloat(document.getElementById("WindowHeight").value);
+            const scaleFactor = parseFloat(document.getElementById("Scale").value);
+
+            // Ratio Analysis, Screen / Window
+            const Xratio = screenWidth / 512;
+            const Yratio = screenHeight / 256;
+
+            // Ratio Analysis, XY_ratio
+            // '135.5041505' constant Minerva
+            const XY_ratio = (101 * Yratio / windowHeight) * windowWidth / (135.5041505 * Xratio);
+
+            // x_right and y_up
+            const x_right = Math.floor(scaleFactor * XY_ratio);
+            const y_up = scaleFactor;
+
+            // Show results
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = `
+                <h3>Results :</h3>
+				<h4>Screen - Window (always 1 on standard QL)</h4>
+                <p><strong>Xr:</strong> ${Xratio.toFixed(4)} - 
+                   <strong>Yr:</strong> ${Yratio.toFixed(4)}</p>
+				<h4>Between Y and X</h4>
+                <p><strong>XY_ratio:</strong> ${XY_ratio.toFixed(4)}</p>
+				<h4>On Minerva:</h4>
+                <p><strong>X right:</strong> ${x_right} (the maximum visible x) - 
+                   <strong>Y up:</strong>    ${y_up}    (the maximum visible y)</p>
+            `;
+}
+</script>
+	<!--  -->
+	</head>
+	<!-- ============================================================ -->
+	<!-- BODY -->
+	<!-- ============================================================ -->
+	<body>
+		<!-- Header section -->
+		<header>
+			<div class="header-container">
+				<a href="index.html">
+					<img src="Logos/RPUFOS_Logo-512.png" alt="Logo" class="logo" />
+				</a>
+				<h1>QL SCALE Calculator</h1>
+			</div>
+			<p style="text-align: center;"><i>Retro Programmers For Obscure Systems<br />
+			Ce site est en constante évolution.<br />
+			This site is continually evolving.</i></p>
+		</header>
+		<!--  -->
+		<hr />
+		<p style="text-align: center;">More information about RPUFOS GameJam on <a href="https://www.youtube.com/@Olipix" target="_blank">Olipix YouTube channel</a></p>
+		<hr />
+		<!-- ============================================================ -->
+		<!-- Main content -->
+		<!-- ============================================================ -->
+		<main>
+			<!--  -->
+			<h2>Purpose</h2>
+			<p>The purpose of this tool is to calculate the QL window values based on the '<b>SCALE</b>' function.</p>
+			<h2>How to</h2>
+			<p>Enter your values in the appropriate fields, then click the '<b>Calculate</b>' button.</p>
+			<!-- ============================================================ -->
+			<!-- INPUTS -->
+			<!-- ============================================================ -->
+			<fieldset>
+				<legend>&nbsp;Input&nbsp;</legend>
+				<!--  -->
+				<fieldset>
+					<legend>&nbsp;Screen&nbsp;</legend>
+					<label for="ScreenWidth" >Width (x)  :</label> <input type="number" min="1" name="ScreenWidth"  id="ScreenWidth"  value="512">
+					&emsp;
+					<label for="ScreenHeight">Height (y) :</label> <input type="number" min="1" name="ScreenHeight" id="ScreenHeight" value="256">
+				</fieldset>
+				<!--  -->
+				<br />
+				<fieldset>
+					<legend>&nbsp;Window&nbsp;</legend>
+					<label for="WindowWidth" >Width (x)  :</label> <input type="number" min="1" name="WindowWidth"  id="WindowWidth"  value="512">
+					&emsp;
+					<label for="WindowHeight">Height (y) :</label> <input type="number" min="1" name="WindowHeight" id="WindowHeight" value="256">
+				</fieldset>
+				<!--  -->
+				<br />
+				<fieldset>
+					<legend>&nbsp;SCALE&nbsp;</legend>
+					<label for="Scale">Factor : </label><input type="number" min="1" name="Scale" id="Scale" value="100">
+				</fieldset>
+				<!--  -->
+				<hr />
+				<button onclick="calculate()">Calculate</button>
+			</fieldset>
+			<!-- ============================================================ -->
+			<!-- OUTPUT -->
+			<!-- ============================================================ -->
+			<fieldset>
+				<legend>&nbsp;Output&nbsp;</legend>
+				<div id="output"></div>
+			</fieldset>
+			<!--  -->
+			<hr />
+			<!-- ============================================================ -->
+			<!-- DOCUMENTATION -->
+			<!-- ============================================================ -->
+			<section>
+				<!-- -->
+				<h3 class="collapsible">To understand the results</h3>
+				<div class="collapsible-content">
+					<h4>The SCALE function more detailed</h4>
+					<p>Call : <b>SCALE f, x, y</b></p>
+					<p>Parameters:<br />
+						<ul>
+							<li><b>f</b>: the scale factor</li>
+							<li><b>x</b>: origin point bottom left x axis, width</li>
+							<li><b>y</b>: origin point bottom left y axis, height</li>
+						</ul>
+					</p>
+					<p>Think of x,y as the origin of an axis if it's 0,0.<br/>
+					If you change x,y to another value, it's like moving along the axes.
+					</p>
+					<p>SCALE isn't just for the window; it's more complex. You can redraw an element to the chosen dimensions.</p>
+					<!--  -->
+					<hr class="hr75" />
+					<!--  -->
+					<h4>About the QL's screen</h4>
+					<p>Its default size is <b>512×256 pixels</b>. However, other dimensions are available with additional options. So if you're working on a standard Sinclair QL, don't change the Screen values.</p>
+					<!--  -->
+					<hr class="hr75" />
+					<!--  -->
+					<h4>For the Y axis (height)</h4>
+					<p>For your drawings, the <b>Y-axis</b> dimension will always be the value of '<b>f</b>', regardless of the defined window size.</p>
+					<p>Example, if <b>f=100</b>, imagine you have <b>100 pixels of height</b>.<br />
+					The QL automatically recalculates everything for you, minimizing display artifacts.</p>
+					<p>N.B.: It would be preferable for the Y-axis to follow the window dimension. If the Y value is 50, then use SCALE 50,0,0. Thus, POINT 0,50 corresponds to the top-left corner. For the rightmost X point, refer to the calculation above.</p>
+					<!--  -->
+					<hr class="hr75" />
+					<!--  -->
+					<h4>For the X axis (height)</h4>
+					<p>On the <b>X-axis</b>, the ratio isn’t what you’d expect (due to the QL’s specific handling), so a precise calculation is required...</p>
+					<p>That’s why this calculator was made.</p>
+					<!--  -->
+					<hr class="hr75" />
+					<!--  -->
+					<h4>And what does this scaling factor do?</h4>
+					<ul>
+						<li>If F = Y, then it's 1:1 scale.</li>
+						<li>If F &gt; Y, the drawing is scaled down.</li>
+						<li>If F &lt; Y, the drawing is scaled up.</li>
+					</ul>
+					<p>We assume Y is the window height.</p>
+					<!--  -->
+					<hr class="hr75" />
+					<!--  -->
+					<h4>The formula</h4>
+					<p>This is why this calculator was designed.</p>
+					<!--  -->
+					<hr class="hr33" />
+					<!--  -->
+					<h5>Calculated ratios, <b>always 1 on a QL base screen</b>:</h5>
+					<div style="text-align:center;">
+					<math xmlns="http://www.w3.org/1998/Math/MathML">
+					<mi>Xratio</mi>
+					<mo>=</mo>
+					<mfrac>
+						<mi>ScreenX</mi>
+						<mn>512</mn>
+					</mfrac>
+					</math>
+					<br /><br />
+					<math>
+					<mi>Yratio</mi>
+					<mo>=</mo>
+					<mfrac>
+						<mi>ScreenY</mi>
+						<mn>256</mn>
+					</mfrac>
+					</math>
+					</div>
+					<!--  -->
+					<hr class="hr33" />
+					<!--  -->
+					<h5>XY ratio calculation (MINERVA, currently used):</h5>
+					<!--  -->
+					<div style="text-align:center;">
+					<math xmlns="http://www.w3.org/1998/Math/MathML">
+					  <mi>XY_ratio</mi>
+					  <mo>=</mo>
+					  <mrow>
+						<mo>(</mo>
+						<mfrac>
+						  <mrow>
+							<mn>101</mn>
+							<mo>×</mo>
+							<mi>Yratio</mi>
+						  </mrow>
+						  <mi>Window Height</mi>
+						</mfrac>
+						<mo>×</mo>
+						<mfrac>
+						  <mi>Window Width</mi>
+						  <mrow>
+							<mo>(</mo>
+							<mn>135.5041505</mn>
+							<mo>×</mo>
+							<mi>Xratio</mi>
+							<mo>)</mo>
+						  </mrow>
+						</mfrac>
+						<mo>)</mo>
+					  </mrow>
+					</math>
+					</div>
+					<br />
+					<!--  -->
+					<hr class="hr33" />
+					<!--  -->
+					<h5>Maximum x value:</h5>
+					<!--  -->
+					<div style="text-align: center;">
+					<math xmlns="http://www.w3.org/1998/Math/MathML">
+						<mi>x</mi><mo>_</mo><mi>right</mi>
+						<mo>=</mo>
+						<mi>INT</mi>
+						<mo>(</mo>
+						<mi>size</mi>
+						<mo>×</mo>
+						<mi>XY_ratio</mi>
+						<mo>)</mo>
+					</math>
+					</div>
+					<p>This calculated <b>value of X is the rightmost visible point</b> on the screen.</p> 
+					<!--  -->
+					<hr class="hr75" />
+					<!--  -->
+					<h4>Redraw a Pixel Art</h4>
+					<p>
+					Consider a line drawing (such as pixel art, a logo, etc.) using <b>POINT</b>, <b>LINE</b>, etc. To resize it, you would then use the <b>SCALE</b> function.
+					<br />
+					Put your code into a procedure. Call the procedure that takes a parameter named for example <b>SCALE</b>.
+					<br /><br />
+					Example :
+					<br />
+					<!--  -->
+					To draw your design anywhere, it is always <b>best to use relative coordinates</b>.
+					<!--  -->
+					<ul>
+						<li>Define a starting point: <b>x0</b>, <b>y0</b>.</li>
+						<li>Provide the channel (<b>#c</b>) to target the correct window.</li>
+						<li>Optionally, for a line drawing, the color.</li>
+						<li>Optionally, for <b>FILL</b>.</li>
+						<li>Finally, the scale (<b>SCALE</b>) of the design.</li>
+					</ul>
+					<!--  -->
+					<pre>
+					1000 DEFine PROCedure p_my_draw( ch, x0, y0, scale, c, f)
+					...
+					1020   SCALE #ch,scale,0,0
+					1030   INK #ch,c
+					...
+					1998   SCALE #ch,100,0,0: REMark return to default values
+					1999 END DEFine p_my_draw
+					</pre>
+					Call the procedure in your program.
+					<pre>
+					100 p_my_draw 1, 10, 10, 200, 0, 0
+					</pre>
+					
+					Draw in channel 1, position 10-10, SCALE 200, color Black, no FILL
+					</p>
+				</div>
+			</section>
+			<!--  -->
+			<hr />
+			<!-- ============================================================ -->
+			<!-- DISCLAIMER -->
+			<!-- ============================================================ -->
+			<article role="note" aria-label="Disclaimer" style="border:1px solid #ccc;background:#f9f9f9;color:#333;padding:16px;border-radius:6px;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif">
+				<h3 style="margin-top:0">⚠️ Disclaimer ⚠️</h3>
+				<p style="margin:0">
+				The software and resources provided here are experimental and unofficial.
+				They are offered <strong>as-is</strong>, without warranty of any kind.
+				<em>Use at your own risk.</em>
+				</p>
+			</article>
+		</main>
+		<hr />
+		<!-- ============================================================ -->
+		<!-- Footer section -->
+		<!-- ============================================================ -->
+		<footer>
+			<img src="Logos/CC-BY-NC-ND-EU.png" alt="CC by NC ND EU" />
+			<p>&copy; 2026 VincentD - RPUFOS Work Tools</p>
+		</footer>
+		<!--  -->
+	</body>
+	<!--  -->
+</html>
+<!-- EOF -->
