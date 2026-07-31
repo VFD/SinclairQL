@@ -42,9 +42,14 @@ config:
 treeView-beta
     📂 QLprojects/
         📁 directories/						## Directory for projects
-            📁 memory :::highlight				## Adaptation d'un jeu (en cours)
-                📄 BOOT 								## Boot program
-                📄 memory.bas						## Main program
+            📁 memory :::highlight				## Memory game like SIMON
+                📄 BOOT 								## Boot program (to do)
+                📄 memory8.bas						## Main program
+                📄 p_rpufos_logo.bas						## procedure to draw RPUFOS logo
+            📁 rpufos :::highlight				## Utilities
+                📄 BOOT 								## Boot program (to do)
+                📄 p_rpufos_logo.bas						## procedure to draw RPUFOS logo (main version to deploy)
+                📄 ...						## to do
             📁 ...								## other project
         💾 flp/								## floppy drive projects
             📁 ...								## other project
