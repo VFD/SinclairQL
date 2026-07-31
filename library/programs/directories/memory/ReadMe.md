@@ -19,8 +19,16 @@ J'ai eu un résultat d'analyse complet puis une question:
 L'IA a converti convenablement le source de Logi'Stick pour l'adapter au QL.\
 Avec fonctions et procédures.
 
-La suite c'est un travail de restructuration et d'afichage pour rendre le jeu un peu plus sympa.
+La suite c'était un travail de restructuration et d'affichage pour rendre le jeu un peu plus sympa.\
+En particulier les fonction dans "p_rpufos_logo", qui trace le logo un peut où on veut avec possibilité de SCALE du logo.\
+D'où l'usage de MERGE juste après l'affichage du titre.
 
+### TO DO
+
+
+- Fichier BOOT
+- FILL des logos
+- Boutons complet dans les logos
 
 
 ## conclusion
