@@ -1,0 +1,54 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Courier New;}}
+\fs24
+
+\b ZX81 FONT FOR QL\b0\line
+by Dilwyn Jones\line\line
+
+This document describes a character set for the Sinclair QL, based on the 63-character font of the Sinclair ZX81. The font is freeware.\line\line
+
+The Sinclair ZX81 uses a 64-character font, uppercase only, and does not conform to the ASCII standard.\line
+Characters 0 to 63 represent the basic font. Codes 128 to 191 represent the same characters, but in reverse video (ink and paper colours swapped). Other character codes are used for keywords.\line\line
+
+Using CHR$(0) to CHR$(63) directly on the QL is difficult because codes below CHR$(32) are control characters (for example CHR$(10) is linefeed). In addition, QL fonts include an extra character below the lowest code, used as a “default” character when the code is out of range. This corresponds to CHR$(-1) on the QL and may cause errors.\line
+This default character is defined as a simple square to indicate an invalid ZX81 character and can be changed using any QL font editor such as FontEd.\line\line
+
+It is therefore preferable to install the ZX81 font as an upper font (font 2), so that it appears as CHR$(128) to CHR$(191). ZX81 characters can then be printed easily using PRINT CHR$(128 + zx81_code), with reversed colours if needed.\line\line
+
+The ZX81 font is based on an 8x8 grid. Most characters occupy the first 6 pixels horizontally, except a few such as Y and T which use 7 pixels.\line\line
+
+On the QL, 8-pixel-wide fonts can only be used with CSIZE 1,0 (normal height) or CSIZE 1,1 (double height).\line
+Since QL text lines normally start 10 pixels below the previous line, the line increment must be changed to 8 pixels to match ZX81 spacing. This can be done using the CHAR_INC command if Toolkit II is available.\line\line
+
+\b 1. Installing the font\b0\line
+The font is 587 bytes long. You must reserve this memory (for example using Toolkit II’s ALCHP function), load the font using LBYTES, then install it using CHAR_USE. Example:\line\line
+
+\pard\li400
+100 base = ALCHP(587)\line
+110 LBYTES flp1_ZX81_font, base\line
+120 CHAR_USE #1, 0, base\line
+130 CHAR_INC #1, 8, 8\line
+\pard\line
+
+The font is now activated as the second font for window channel #1.\line
+Line 100 allocates memory, line 110 loads the font, line 120 installs it (the “0” keeps the lower font unchanged), and line 130 sets character increments to 8 pixels horizontally and vertically.\line\line
+
+You can test the font with:\line\line
+
+\pard\li400
+200 CLS\line
+210 CSIZE #1, 1, 0\line
+220 FOR c = 128 TO 191\line
+230   PRINT CHR$(c);\line
+240 END FOR c\line
+\pard\line
+
+After use, if memory was allocated with ALCHP, remember to deinstall the font and free memory:\line\line
+
+\pard\li400
+300 CHAR_USE #1, 0, 0\line
+310 RECHP base\line
+\pard\line
+
+}
+}
