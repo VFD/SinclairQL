@@ -53,11 +53,10 @@ Exemple :
 
 La base du design, matrice de 8x9.
 
-Ci-dessous avec CSIZE.\
-
-Avec comme valeur 0, on perd à l'affichage les bits 7,8.\
-Avec comme valeur 1, on affiche tout.
-Avec comme valeur 2,3, on perd à l'affichage les bits 1,7,8.\
+Ci-dessous avec CSIZE.
+- Avec comme valeur 0, on perd à l'affichage les bits 7,8.\
+- Avec comme valeur 1, on affiche tout.
+- Avec comme valeur 2,3, on perd à l'affichage les bits 1,7,8.\
 
 
 ```
@@ -113,5 +112,14 @@ ___
 - Octets suivants : Par 9, chaque ligne du caractère.
 
 Bref c'est tout simple.
+
+Autre départ souvent vu, 127 ($7F).
+
+___
+### Via bloc DATA
+
+On peut transformer un fichier QL font en bloc de ligne DATA.
+
+
 
 ___
