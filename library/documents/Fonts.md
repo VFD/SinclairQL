@@ -55,9 +55,9 @@ Exemple :
 La base du design, matrice de 8x9.
 
 Ci-dessous avec CSIZE.
-- Avec comme valeur 0, on perd à l'affichage les bits 7,8.\
+- Avec comme valeur 0, on perd à l'affichage les bits 7,8.
 - Avec comme valeur 1, on affiche tout.
-- Avec comme valeur 2,3, on perd à l'affichage les bits 1,7,8.\
+- Avec comme valeur 2,3, on perd à l'affichage les bits 1,7,8.
 
 
 ```
@@ -191,8 +191,8 @@ DATA 20, 10, 28, 38, 10, 38, 38, 38, 38  : REMark bougie 2
 ```
 
 
-Bougie : alterner à la même position pour effet de flamme qui bouge.
-Chaine : en vertical, ABABAB...
+- Bougie : alterner à la même position pour effet de flamme qui bouge.
+- Chaine : en vertical, ABABAB...
 
 
 ___
