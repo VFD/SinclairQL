@@ -1,6 +1,6 @@
 100 REMark === font generation parameters ===
 110 fst = 192
-120 lst = 195
+120 lst = 208
 130 cnt = lst - fst + 1
 140 PRINT #0,"Count:";cnt;
 150 :
@@ -18,11 +18,11 @@
 270 :
 280 REMark === store glyph data ===
 290 ptr = bas + 2
-300 RESTORE 530
+300 RESTORE 1000
 310 FOR ch = fst TO lst
 320   FOR li = 0 TO 8
-330     READ b
-340     POKE ptr, b
+330     READ b$
+340     POKE ptr, HEX(b$)
 350     ptr = ptr + 1
 360   END FOR li
 370 END FOR ch
@@ -39,11 +39,30 @@
 480 REMark RECHP bas
 490 :
 500 STOP
-510 REMark === example data (only 4 characters here) ===
-520 REMark chr$(192)
-530 DATA 255,129,129,129,129,129,129,255,0
-540 REMark chr$(193)
-550 DATA 0,24,36,66,66,36,24,0,0
-560 REMark chr$(194)
-570 DATA 255,0,255,0,255,0,255,0,0
-580 DATA 0,0,0,0,0,0,0,0,0
+999 :
+1000 :
+1010 : REMARK CSIZE 1,0 ou CSIZE 1,1 : MODE 4 only
+1020 :
+1030 DATA "00", "10", "10", "7C", "10", "10", "38", "44", "FE"  : REMark Tombe
+1040 DATA "00", "7C", "82", "FE", "82", "92", "82", "82", "FE"  : REMark Coffre 1
+1050 DATA "FE", "44", "44", "28", "10", "28", "44", "7C", "FE"  : REMark sablier
+1060 DATA "00", "02", "FF", "FF", "68", "78", "60", "60", "00"  : REMark gun to right
+1070 DATA "ED", "ED", "00", "BB", "BB", "00", "D7", "D7", "00"  : REMark motif type brique
+1080 DATA "3C", "42", "3C", "42", "91", "A1", "81", "7E", "00"  : REMark fiole 1
+1090 DATA "7C", "28", "28", "6C", "C6", "82", "FE", "DE", "7C"  : REMark fiole 2
+1110 DATA "04", "2E", "1D", "97", "9E", "8C", "5E", "5E", "3F"  : REMark chat
+1120 DATA "00", "12", "33", "BF", "AD", "9E", "4C", "5E", "3F"  : REMark chat 2
+1130 DATA "00", "88", "F8", "A8", "FA", "72", "71", "79", "7E"  : REMark chat 3
+1140 DATA "FC", "8A", "8E", "82", "82", "82", "82", "82", "FE"  : REMark Paper
+1150 DATA "FC", "8A", "AE", "82", "BA", "82", "BA", "82", "FE"  : REMark Paper Text
+1160 DATA "C6", "C6", "BE", "F6", "6C", "60", "6C", "6C", "6C"  : REMark chaine, haut - A
+1170 DATA "6C", "60", "6C", "B6", "F6", "C6", "C6", "C6", "C6"  : REMark chaine, bas - B
+2000 :
+2010 : REMark compatible tous CSIZE
+2020 :
+2030 DATA "00", "44", "44", "28", "10", "10", "38", "7C", "00"  : REMark coupe
+2040 DATA "08", "10", "28", "38", "10", "38", "38", "38", "38"  : REMark bougie 1
+2050 DATA "20", "10", "28", "38", "10", "38", "38", "38", "38"  : REMark bougie 2
+3000 :
+3010 : REMark
+3020 :

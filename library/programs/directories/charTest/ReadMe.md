@@ -31,9 +31,17 @@ To be continued...
 Tentative de creation d'une font.\
 ça à l'air de le faire mais avec csize 1,0 et 1,1.
 
+Voir ma doc dans document.
+
+Pour le moment OK en mode 4. Le Mode 8 c'est encore autre chose.
+
 ### loadChar.bas
 
 Charge la font issue de buildChar et affiche.
+
+Inclu quelques demos qui utilise le CHAR_INC pour supprimer la ligne séparatrice entre 2 ligne de texte.
+
+Note : la fonction OVER permet l'affichage en transparence.
 
 
 ### zx81

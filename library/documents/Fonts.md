@@ -6,7 +6,9 @@ ___
 Ce document sert à comprendre le mécanisme des fontes sous sinclair QL.\
 C'est très particulier...
 
-Dans ldes docs on trouve 8x10, mais apparement j'ai du 8x9. C'est encore à vérifier.
+J'ai du 8x9 via un editeur de font sur QL. C'est encore à vérifier.
+
+
 
 ___
 ### Strucure d'un caractère
@@ -22,13 +24,16 @@ Utiliser une matrice 5x9.
 
 Toutes tailles signifie :
 
-- Mode 4 ou 8
+- Mode 4
 - CSIZE 0
 - CSIZE 1
 - CSIZE 2
 - CSIZE 3
 - Compatible Minerva
 - Compatible QL standard
+
+En Mode 8, c'est pire.... Donc pour le moment concerne que le mode 4.
+
 
 ___
 ### CSIZE
@@ -162,32 +167,32 @@ La font est prète.
 ## En Tests
 
 ```basic
-:
-: REMARK CSIZE 1,0 ou CSIZE 1,1
-:
-DATA 00, 10, 10, 7C, 10, 10, 38, 44, FE  : REMark Tombe
-DATA 00, 7C, 82, FE, 82, 92, 82, 82, FE  : REMark Coffre 1
-DATA FE, 44, 44, 28, 10, 28, 44, 7C, FE  : REMark sablier
-DATA 00, 02, FF, FF, 68, 78, 60, 60, 00  : REMark gun to right
-DATA ED, ED, 00, BB, BB, 00, D7, D7, 00  : REMark motif type brique
-DATA 3C, 42, 3C, 42, 91, A1, 81, 7E, 00  : REMark fiole 1
-DATA 7C, 28, 28, 6C, C6, 82, FE, DE, 7C  : REMark fiole 2
-DATA 04, 2E, 1D, 97, 9E, 8C, 5E, 5E, 3F  : REMark chat
-DATA 00, 12, 33, BF, AD, 9E, 4C, 5E, 3F  : REMark chat 2
-DATA 00, 88, F8, A8, FA, 72, 71, 79, 7E  : REMark chat 3
-DATA FC, 8A, 8E, 82, 82, 82, 82, 82, FE  : REMark Paper
-DATA FC, 8A, AE, 82, BA, 82, BA, 82, FE  : REMark Paper Text
-DATA C6, C6, BE, F6, 6C, 60, 6C, 6C, 6C  : REMark chaine, haut - A
-DATA 6C, 60, 6C, B6, F6, C6, C6, C6, C6  : REMark chaine, bas - B
-:
-: REMark compatible tous CSIZE
-:
-DATA 00, 44, 44, 28, 10, 10, 38, 7C, 00  : REMark coupe
-DATA 08, 10, 28, 38, 10, 38, 38, 38, 38  : REMark bougie 1
-DATA 20, 10, 28, 38, 10, 38, 38, 38, 38  : REMark bougie 2
-:
-: REMark
-:
+1000 :
+1010 : REMARK CSIZE 1,0 ou CSIZE 1,1 : Mode 4 only
+1020 :
+1030 DATA "00", "10", "10", "7C", "10", "10", "38", "44", "FE"  : REMark Tombe
+1040 DATA "00", "7C", "82", "FE", "82", "92", "82", "82", "FE"  : REMark Coffre 1
+1050 DATA "FE", "44", "44", "28", "10", "28", "44", "7C", "FE"  : REMark sablier
+1060 DATA "00", "02", "FF", "FF", "68", "78", "60", "60", "00"  : REMark gun to right
+1070 DATA "ED", "ED", "00", "BB", "BB", "00", "D7", "D7", "00"  : REMark motif type brique
+1080 DATA "3C", "42", "3C", "42", "91", "A1", "81", "7E", "00"  : REMark fiole 1
+1090 DATA "7C", "28", "28", "6C", "C6", "82", "FE", "DE", "7C"  : REMark fiole 2
+1110 DATA "04", "2E", "1D", "97", "9E", "8C", "5E", "5E", "3F"  : REMark chat
+1120 DATA "00", "12", "33", "BF", "AD", "9E", "4C", "5E", "3F"  : REMark chat 2
+1130 DATA "00", "88", "F8", "A8", "FA", "72", "71", "79", "7E"  : REMark chat 3
+1140 DATA "FC", "8A", "8E", "82", "82", "82", "82", "82", "FE"  : REMark Paper
+1150 DATA "FC", "8A", "AE", "82", "BA", "82", "BA", "82", "FE"  : REMark Paper Text
+1160 DATA "C6", "C6", "BE", "F6", "6C", "60", "6C", "6C", "6C"  : REMark chaine, haut - A (bug)
+1170 DATA "6C", "60", "6C", "B6", "F6", "C6", "C6", "C6", "C6"  : REMark chaine, bas - B (bug)
+2000 :
+2010 : REMark compatible tous CSIZE
+2020 :
+2030 DATA "00", "44", "44", "28", "10", "10", "38", "7C", "00"  : REMark coupe
+2040 DATA "08", "10", "28", "38", "10", "38", "38", "38", "38"  : REMark bougie 1
+2050 DATA "20", "10", "28", "38", "10", "38", "38", "38", "38"  : REMark bougie 2
+3000 :
+3010 : REMark
+3020 :
 ```
 
 
