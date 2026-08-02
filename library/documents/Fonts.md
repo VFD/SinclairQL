@@ -182,8 +182,8 @@ La font est prète.
 1130 DATA "00", "88", "F8", "A8", "FA", "72", "71", "79", "7E"  : REMark chat 3
 1140 DATA "FC", "8A", "8E", "82", "82", "82", "82", "82", "FE"  : REMark Paper
 1150 DATA "FC", "8A", "AE", "82", "BA", "82", "BA", "82", "FE"  : REMark Paper Text
-1160 DATA "C6", "C6", "BE", "F6", "6C", "60", "6C", "6C", "6C"  : REMark chaine, haut - A (bug)
-1170 DATA "6C", "60", "6C", "B6", "F6", "C6", "C6", "C6", "C6"  : REMark chaine, bas - B (bug)
+1160 DATA "C6", "C6", "BE", "F6", "6C", "60", "6C", "6C", "6C"  : REMark chaine, haut - A
+1170 DATA "6C", "60", "6C", "B6", "F6", "C6", "C6", "C6", "C6"  : REMark chaine, bas - B
 2000 :
 2010 : REMark compatible tous CSIZE
 2020 :
