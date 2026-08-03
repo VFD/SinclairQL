@@ -6,8 +6,18 @@ ___
 Ce document sert à comprendre le mécanisme des fontes sous sinclair QL.\
 C'est très particulier...
 
-J'ai du 8x9 via un editeur de font sur QL. C'est encore à vérifier.
+J'ai du 8x9 via un editeur de font sur QL.\
 
+Ci-dessous je reprends l'image fourni qui permet de mieux saisir ce qui se passe.
+
+
+<p align="center">
+  <img src="assets/img/charEditor.png" alt="Screenshot de l'Application" width="250" style="margin:auto;">
+</p>
+
+NDR :
+- Il y a possiblement une autre methode sans le **Toolkit II**, en cours d'analyse.
+- La méthode **DATA** permet d'intégrer directement la fonte au programme, une fois exécuter, on supprime les DATA (DLINE).
 
 
 ___
@@ -163,8 +173,8 @@ La font est prète.
 
 
 
-
-## En Tests
+___
+## Pour Tests
 
 ```basic
 1000 :
@@ -195,9 +205,8 @@ La font est prète.
 3020 :
 ```
 
-
 - Bougie : alterner à la même position pour effet de flamme qui bouge.
 - Chaine : en vertical, ABABAB...
-
+- Ce code est à titre indicatif, il a évolué dans le code de génération.
 
 ___
