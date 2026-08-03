@@ -16,20 +16,19 @@ Ci-dessous je reprends l'image fourni qui permet de mieux saisir ce qui se passe
 </p>
 
 NDR :
-- Il y a possiblement une autre methode sans le **Toolkit II**, en cours d'analyse.
+- Il y a possiblement une autre méthode sans le **Toolkit II**, en cours d'analyse.
 - La méthode **DATA** permet d'intégrer directement la fonte au programme, une fois exécuter, on supprime les DATA (DLINE).
 
 
 ___
 ### Strucure d'un caractère
 
-Chaque caractère est sur une matrice de 8x9.\
+Chaque caractère est sur une matrice de 8x9 (voir image ci-dessus).\
 Selon le mode CSIZE, le QL utilisera une certaine partie.\
 D'où le fait que le glyphe peut être tronqué à l'affichage.
 
-La base c'est 5 colonnes.
-
-Pour dessiner un police de caraactères compatible toutes taille :\
+La base c'est 5 colonnes pour une compatibilité tous mode (MODE, CSIZE).\
+Pour dessiner une police de caraactères compatible toutes taille :\
 Utiliser une matrice 5x9.
 
 Toutes tailles signifie :
@@ -136,10 +135,6 @@ Code à améliorer et commenter.
 ```
 
 
-
-
-
-
 ___
 ### Designer la partie étendue uniquement
 
@@ -208,5 +203,18 @@ ___
 - Bougie : alterner à la même position pour effet de flamme qui bouge.
 - Chaine : en vertical, ABABAB...
 - Ce code est à titre indicatif, il a évolué dans le code de génération.
+- "nn" pour hexadécimal, nécessaire.
+- à amélioré pour n'avoir que : "o1o2o3o4o5o6o7o8", les 8 octets ensemble puis découper la chaîne.
+
+
+___
+## Méthode directe
+
+Par méthode directe, s'entend le fait de faire les POKE directement dans la mémoire.\
+L'exemple vient des documents disponible sur les fontes.
+
+En cours d'analyse pour commentaires plus poussés.
+
+TO DO
 
 ___
