@@ -12,7 +12,7 @@ Ci-dessous je reprends l'image fourni qui permet de mieux saisir ce qui se passe
 
 
 <p align="center">
-  <img src="assets/img/charEditor.png" alt="Screenshot de l'Application" width="250" style="margin:auto;">
+  <img src="/assets/img/charEditor.png" alt="Screenshot de l'Application" width="250" style="margin:auto;">
 </p>
 
 NDR :
