@@ -9,6 +9,9 @@ Pour développer rapidement on peut utiliser cette option.
 Pour des raisons pratiques, mes programmes en SuperBASIC sont codés avec NotePad++ et j'utilise comme nom "nom.bas".\
 Ce qui permet à mon OS de reconnaître les fichiers écrit en BASIC.
 
+Dans QemuLator, les répertoires sont vue comme "flp1_".
+
+
 <p align="center">────────────────────</p>
 
 Par contre lors de la bascule sur un microdrive, je reprends le formalisme normal du QL.\
