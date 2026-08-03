@@ -61,4 +61,11 @@ Pour base de travail.
 
 M'a permis de tester les Binaires de type **font**.
 
+
+__
+## UDG_bas
+
+Fonction ASM pour charger les caractères.\
+à tester car alors pas besoin du toolkit II ?
+
 ___

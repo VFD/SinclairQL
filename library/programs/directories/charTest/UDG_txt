@@ -1,0 +1,45 @@
+QL USER DEFINED GRAPHICS
+
+This is a short program in superBASIC to implement User- defined graphics on the QL. The data statements in lines 210 onwards contain some machine code which is POKEd into memory at the location reserved by the RESPR statement in line 110. This sets up the required character set, using parameters passed to it defining the code of the first character required, the number of characters for which space has been reserved, the address of that space and the channel for which these characters are being defined also provided is a function that returns the start address at which bit patterns may be POKEd, given a simpler version of these data. 
+
+This program is used by simply typing it in as shown:
+ 
+100 RESTORE 
+110 a=RESPR(64) 
+120 FOR i=0 TO 46 STEP 2 
+130 READ x:POKE_W a+i,x 
+140 END FOR i 
+150 DEFine FuNction udg (chan,start,num) 
+160 LOCal space 
+170 space=RESPR(2+9*num) 
+180 CALL a,chan,space,start,num 
+190 RETurn space+2 
+200 END DEFine 
+210 DATA 8302,48,-15620,40,-11839 
+220 DATA -19986,52,27676,8246,-30720 
+230 DATA 27926,8256,28672,-27703,9282 
+240 DATA 5251,21316,5444,1,28709 
+250 DATA 20035,20085,28922,20085 
+
+RUN this program and reserve the characters for re-defining using 
+
+chars = udg(1,128,16) 
+
+(This reserves space for 16 characters starting at character number 128). 
+
+Characters are defined as a bit pattern, which MUST occupy ONLY bits 6 to 2 inclusive of each byte - bits being numbered 0 to 7, with bit 7 the most significant, and bit 6 being the 
+left most element. Each character requires nine consecutive bytes to define it with the first byte corresponding to the top of the character. 
+
+Thus the line 
+
+FOR i=0 to 8: POKE chars+i,124 :END FOR i
+ 
+will set up character 128 as a solid block, similar to the cursor. CSIZE and all other character control statements 
+will work in exactly the same way with the user defined graphics. 
+
+An example of the first of which may be printed using :
+
+PRINT CHR$(128)
+ 
+Please note that this program may in some cases, alter some of the symbols in the existing character set this will not however result in your programs becoming unreadable! 
+
