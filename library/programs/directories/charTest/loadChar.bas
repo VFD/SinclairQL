@@ -69,9 +69,6 @@
 820 PRINT FILL$(CHR$(234),60)
 830 PRINT FILL$(CHR$(235),60)
 890 CHAR_INC #1,8,10
-
-
-
 1000 REMark ---------------------
 1010 REMark Demo Tableau
 1020 REMark ---------------------
@@ -91,8 +88,6 @@
 1150   AT #ch,  1,1 : PRINT #ch,"Hello"
 1190 p_std_char (ch): REMark reset default
 1200 END DEFine p_tableau
-
-
 1500 REMark ---------------------
 1510 REMark demo arrow (4x4 char)
 1520 REMark  ch:  channel
@@ -106,6 +101,25 @@
 1600   AT #ch,x+1,y : PRINT #ch,CHR$(224);CHR$(225)
 1610   p_std_char (ch): REMark reset default
 1620 END DEFine p_arrow
+1700 REMark ---------
+1710 REMark Show char
+1720 REMark ---------
+1722 DEFine PROCedure p_show_char (ch, first, last)
+1725   LOCal c, row, col
+1742   CHAR_USE #ch, 0, base
+1747   CSIZE #ch,1,0
+1750   row=2: col=0
+1760   FOR c=first TO last
+1770     AT #ch,row,col
+1780     REMark Print code number (3 digits) + character
+1790     IF c<100 THEN PRINT #ch," ";
+1800     PRINT #ch,c;" ";CHR$(c);"  ";
+1810     REMark Move to next row
+1820     row=row+1
+1830     REMark Switch to next column when reaching bottom
+1840     IF row>19 THEN row=2: col=col+7
+1850   NEXT c
+1899 END DEFine p_show_char
 7997 :
 7998 STOP
 7999 :
@@ -128,5 +142,15 @@
 8150   CHAR_INC #1,cx,cy : OVER o :
 8160 END DEFine p_set_char
 8200 :
-8210 :
+8210 REMark define work
 8230 :
+8240 define procedure p_work_area (ch, lx, ly, x0, y0)
+8250   open #ch, scr_
+8260   window #ch, lx, ly, x0, y0
+8270   scale #ch, ly, 0,0
+8280   :
+8290 end define p_work_area
+8300 :
+8310 p_show_char #3, 127, 255
+8320 :
+
