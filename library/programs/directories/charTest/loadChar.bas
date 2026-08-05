@@ -1,7 +1,7 @@
 100 REMark === Reserve memory for the font ===
 110 REMark  values must match the build
 120 fst = 192
-130 lst = 225
+130 lst = 247
 140 num = ((lst-fst+1)*9)+2
 150 base = ALCHP(num)
 160 REMark === Load the font file into memory ===
@@ -14,7 +14,7 @@
 230 CLS #1: CSIZE #1,1,0; : REMark CHAR_INC #1,8,10
 240 REMark === Display all characters from 32 to 255 ===
 250 FOR c = 192 TO 255
-260   PRINT #1, CHR$(c)!;
+260   PRINT #1, c;":";CHR$(c)!!;
 270 END FOR c
 280 REMark === End: remove the font if needed ===
 290 REMark CHAR_USE #1,0,0
@@ -54,38 +54,79 @@
 630 END FOR i
 640 CSIZE #1,1,0
 645 :
-650 STOP
-660 :
-670 CLS#1: REMark demo arrow
-680 CHAR_INC #1,8,9 : OVER 1 : REMark Transparent mode, no y space
-690 PRINT CHR$(222);CHR$(223)\CHR$(224);CHR$(225)\
-700 CHAR_INC #1,8,10 : OVER 0: REMark reset default
-710 :
 720 STOP
 730 :
-8000 : REMark ---------------------------
-8010 : REMark REMark reset default values
-8020 : REMark ch: channel
-8030 : REMark ---------------------------
+740 CLS #1:
+750 PRINT FILL$(CHR$(227),60)
+760 PRINT FILL$(CHR$(228),60)
+765 CHAR_INC #1,8,9 : OVER 1 : REMark Transparent mode, no y space
+770 PRINT FILL$(CHR$(229),60)
+780 PRINT FILL$(CHR$(230),60)
+790 PRINT FILL$(CHR$(231),60)
+800 PRINT FILL$(CHR$(232),60)
+805 CHAR_INC #1,8,8 : OVER 1 : REMark Transparent mode, no y space
+810 PRINT FILL$(CHR$(233),60)
+820 PRINT FILL$(CHR$(234),60)
+830 PRINT FILL$(CHR$(235),60)
+890 CHAR_INC #1,8,10
+
+
+
+1000 REMark ---------------------
+1010 REMark Demo Tableau
+1020 REMark ---------------------
+1030 DEFine PROCedure p_tableau (ch)
+1040   LOCal i
+1050   CHAR_INC #ch,8,9: OVER 1
+1060   AT #ch, 0,1: PRINT #ch,FILL$(CHR$(220),12)
+1065   AT #ch, 2,1: PRINT #ch,FILL$(CHR$(220),12)
+1070   AT #ch,11,1: PRINT #ch,FILL$(CHR$(220),12)
+1080   FOR i=1 TO 10
+1090     AT #ch,i, 0: PRINT #ch,CHR$(217)
+1100     AT #ch,i,13: PRINT #ch,CHR$(217)
+1110   END FOR i
+1120   AT #ch,  0,0 : PRINT #ch,CHR$(219): AT #ch,  0,13: PRINT #ch,CHR$(221)
+1130   AT #ch,  2,0 : PRINT #ch,CHR$(214): AT #ch,  2,13: PRINT #ch,CHR$(212)
+1140   AT #ch, 11,0 : PRINT #ch,CHR$(216): AT #ch, 11,13: PRINT #ch,CHR$(218)
+1150   AT #ch,  1,1 : PRINT #ch,"Hello"
+1190 p_std_char (ch): REMark reset default
+1200 END DEFine p_tableau
+
+
+1500 REMark ---------------------
+1510 REMark demo arrow (4x4 char)
+1520 REMark  ch:  channel
+1530 REMark  x0:  pos x
+1540 REMark  y0:  pos y
+1550 REMark  use also line x0+1
+1560 REMark ---------------------
+1570 DEFine PROCedure p_arrow (ch, x, y)
+1580   CHAR_INC #ch,8,9 : OVER 1 : REMark Transparent mode, no y space
+1590   AT #ch,x  ,y : PRINT #ch,CHR$(222);CHR$(223)
+1600   AT #ch,x+1,y : PRINT #ch,CHR$(224);CHR$(225)
+1610   p_std_char (ch): REMark reset default
+1620 END DEFine p_arrow
+7997 :
+7998 STOP
+7999 :
+8000 REMark ---------------------------
+8010 REMark REMark reset default values
+8020 REMark ch: channel
+8030 REMark ---------------------------
 8040 DEFine PROCedure p_std_char (ch)
 8050   CHAR_INC #ch,8,10 : OVER 0:
 8060 END DEFine p_std_char
-8070 : REMark -----------------
-8080 : REMark set char size
-8090 : REMark ch: channel
-8100 : REMark x:  x size
-8110 : REMark y:  y size
-8120 : REMark o:  over (1 or 0)
-8130 : REMark -----------------
-8140 DEFine PROCedure p_set_char (ch, x, y, o)
-8150   CHAR_INC #1,x,y : OVER o :
+8065 :
+8070 REMark -----------------
+8080 REMark set char size
+8090 REMark ch: channel
+8100 REMark x:  x size
+8110 REMark y:  y size
+8120 REMark o:  over (1 or 0)
+8130 REMark -----------------
+8140 DEFine PROCedure p_set_char (ch, cx, cy, o)
+8150   CHAR_INC #1,cx,cy : OVER o :
 8160 END DEFine p_set_char
 8200 :
 8210 :
 8230 :
-8240 DEFine FuNction p_repeat$(c$, n)
-8250  LOCal t$, i
-8260  DIM t$(n)
-8270  FOR i = 1 TO n: t$(i) = c$ : END FOR i
-8280  RETurn t$
-8290 END DEFine p_repeat$

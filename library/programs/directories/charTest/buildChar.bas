@@ -1,6 +1,6 @@
 100 REMark === font generation parameters ===
 110 fst = 192
-120 lst = 225
+120 lst = 244
 130 cnt = lst - fst + 1
 140 PRINT #0,"Count:";cnt;
 150 :
@@ -21,7 +21,7 @@
 300 RESTORE 1000
 310 FOR ch = fst TO lst
 320   FOR li = 0 TO 8
-330     READ b$
+330     READ b$: PRINT b$!;
 340     POKE ptr, HEX(b$)
 350     ptr = ptr + 1
 360   END FOR li
@@ -86,5 +86,26 @@
 1430 DATA "80", "C0", "E0", "F0", "80", "88", "8C", "8E", "FF"  : REMark B
 1440 DATA "FF", "71", "31", "11", "01", "0F", "07", "03", "01"  : REMark C
 1450 DATA "FF", "8E", "8C", "88", "80", "F0", "E0", "C0", "80"  : REMark D
+1460 :
+1470 : REMark 19
+2000 DATA "00", "3E", "7F", "7F", "A7", "A7", "DF", "72", "00"  : REMark Skull
+2010 DATA "00", "7F", "41", "5D", "55", "45", "7D", "01", "FF"  : Remark Greek 1
+2020 DATA "FF", "80", "BE", "A2", "AA", "BA", "82", "FE", "00"  : Remark Greek 1 inverse
+2030 DATA "CC", "CC", "00", "33", "33", "00", "CC", "CC", "00"  : REMark Pattern A
+2040 DATA "33", "33", "FF", "CC", "CC", "FF", "33", "33", "FF"  : REMark Inverse Patern A
+2050 DATA "24", "24", "42", "42", "42", "42", "24", "24", "18"  : REMark try vert and H
+2060 DATA "A5", "BD", "BD", "A5", "BD", "BD", "A5", "BD", "BD"  : REMark Pattern
+2070 DATA "FF", "FF", "C3", "DF", "DF", "DF", "FF", "FF", "00"  : Remark Pattern 8x8
+2080 DATA "81", "43", "3F", "27", "27", "3F", "7F", "FF", "00"  : Remark 
+2090 DATA "81", "7F", "41", "41", "41", "41", "41", "FF", "00"  : 
+2100 DATA "FF", "FF", "FF", "FF", "FF", "FF", "FF", "FF", "00"  : REMark Bloc 8x8 ZX 81
+2110 DATA "F0", "F0", "F0", "F0", "FF", "FF", "FF", "FF", "00"  : REMark Corner
+2120 DATA "FF", "FF", "FF", "FF", "F0", "F0", "F0", "F0", "00"  : REMark 
+2130 DATA "FF", "FF", "FF", "FF", "0F", "0F", "0F", "0F", "00"  : REMark 
+2140 DATA "0F", "0F", "0F", "0F", "FF", "FF", "FF", "FF", "00"  : REMark 
+2150 DATA "00", "00", "00", "00", "FF", "FF", "FF", "FF", "00"  : REMark Barre
+2160 DATA "FF", "FF", "FF", "FF", "00", "00", "00", "00", "00"  : REMark 
+2170 DATA "F0", "F0", "F0", "F0", "F0", "F0", "F0", "F0", "00"  : REMark 
+2180 DATA "0F", "0F", "0F", "0F", "0F", "0F", "0F", "0F", "00"  : REMark 
 
 
