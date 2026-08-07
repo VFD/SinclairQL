@@ -1,7 +1,7 @@
 100 REMark === Reserve memory for the font ===
 110 REMark  values must match the build
 120 fst = 192
-130 lst = 247
+130 lst = 251
 140 num = ((lst-fst+1)*9)+2
 150 base = ALCHP(num)
 160 REMark === Load the font file into memory ===
@@ -30,18 +30,6 @@
 390 :
 400 STOP
 410 :
-420 CLS#1 : REMark chain demo
-430 CHAR_INC #1,8,9 : OVER 1 : REMark Transparent mode, no y space
-440 x0=1: y0=1
-450 AT #1,0,0: PRINT FILL$(CHR$(197)&CHR$(197),25): REMark to attach the chain...
-460 REPeat loop
-470   AT #1,x0,y0: PRINT CHR$(205)
-480   AT #1,x0+1,y0: PRINT CHR$(206)
-490   x0=x0+2
-500   IF x0=15 THEN EXIT loop
-510 END REPeat loop
-520 CHAR_INC #1,8,10 : OVER 0: REMark reset default
-530 :
 540 STOP
 550 :
 560 CLS#1 : REMark Candle demo
@@ -74,7 +62,7 @@
 1020 REMark ---------------------
 1030 DEFine PROCedure p_tableau (ch)
 1040   LOCal i
-1050   CHAR_INC #ch,8,9: OVER 1
+1050   CHAR_INC #ch,8,9: OVER #ch,1
 1060   AT #ch, 0,1: PRINT #ch,FILL$(CHR$(220),12)
 1065   AT #ch, 2,1: PRINT #ch,FILL$(CHR$(220),12)
 1070   AT #ch,11,1: PRINT #ch,FILL$(CHR$(220),12)
@@ -96,7 +84,7 @@
 1550 REMark  use also line x0+1
 1560 REMark ---------------------
 1570 DEFine PROCedure p_arrow (ch, x, y)
-1580   CHAR_INC #ch,8,9 : OVER 1 : REMark Transparent mode, no y space
+1580   CHAR_INC #ch,8,9 : OVER #ch,1 : REMark Transparent mode, no y space
 1590   AT #ch,x  ,y : PRINT #ch,CHR$(222);CHR$(223)
 1600   AT #ch,x+1,y : PRINT #ch,CHR$(224);CHR$(225)
 1610   p_std_char (ch): REMark reset default
@@ -119,7 +107,30 @@
 1830     REMark Switch to next column when reaching bottom
 1840     IF row>19 THEN row=2: col=col+7
 1850   NEXT c
-1899 END DEFine p_show_char
+1860 END DEFine p_show_char
+1870 :
+1880 :
+1890 :
+
+
+1900 REMark ----------
+1910 REMark Demo chain
+1920 REMark ----------
+1930 Define procedure p_chain (ch)
+1940   CLS #ch : REMark chain demo
+1950   CHAR_INC #ch,8,9 : OVER #ch,1 : REMark Transparent mode, no y space
+1960   x0=1: y0=1
+1970   AT #ch,0,0: PRINT #ch,FILL$(CHR$(197)&CHR$(197),25): REMark to attach the chain...
+1980   REPeat loop
+1990     AT #ch,x0  ,y0: PRINT #ch,CHR$(205)
+2000     AT #ch,x0+1,y0: PRINT #ch,CHR$(206)
+2010     x0=x0+2
+2020     IF x0=15 THEN EXIT loop
+2030   END REPeat loop
+2040   CHAR_INC #ch,8,10 : OVER #ch,0: REMark reset default
+2050 end define p_chain
+2060 :
+
 7997 :
 7998 STOP
 7999 :
@@ -128,7 +139,7 @@
 8020 REMark ch: channel
 8030 REMark ---------------------------
 8040 DEFine PROCedure p_std_char (ch)
-8050   CHAR_INC #ch,8,10 : OVER 0:
+8050   CHAR_INC #ch,8,10 : OVER #ch,0:
 8060 END DEFine p_std_char
 8065 :
 8070 REMark -----------------
@@ -139,7 +150,7 @@
 8120 REMark o:  over (1 or 0)
 8130 REMark -----------------
 8140 DEFine PROCedure p_set_char (ch, cx, cy, o)
-8150   CHAR_INC #1,cx,cy : OVER o :
+8150   CHAR_INC #ch,cx,cy : OVER #ch,o :
 8160 END DEFine p_set_char
 8200 :
 8210 REMark define work
@@ -151,6 +162,7 @@
 8280   :
 8290 end define p_work_area
 8300 :
-8310 p_show_char #3, 127, 255
-8320 :
+8310 p_work_area #3, 512,200, 0,0
+8320 p_show_char #3, 127, 255
+8330 :
 

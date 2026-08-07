@@ -1,6 +1,6 @@
 100 REMark === font generation parameters ===
 110 fst = 192
-120 lst = 244
+120 lst = 255
 130 cnt = lst - fst + 1
 140 PRINT #0,"Count:";cnt;
 150 :
@@ -107,5 +107,20 @@
 2160 DATA "FF", "FF", "FF", "FF", "00", "00", "00", "00", "00"  : REMark 
 2170 DATA "F0", "F0", "F0", "F0", "F0", "F0", "F0", "F0", "00"  : REMark 
 2180 DATA "0F", "0F", "0F", "0F", "0F", "0F", "0F", "0F", "00"  : REMark 
+2190 :
+2200 DATA "1C", "7E", "FF", "FE", "7F", "17", "23", "45", "89"  : REMark Spider A
+2210 DATA "00", "00", "00", "F0", "A0", "F0", "48", "24", "22"  : REMark Spider B = AB
+2220 DATA "AA", "55", "A9", "59", "A8", "C8", "80", "80", "80"  : Remark web A
+2230 DATA "AA", "54", "28", "10", "10", "10", "00", "00", "00"  : Remark web B = AB
+2240 :
+2250 DATA "00", "38", "7C", "FE", "A7", "A7", "DF", "FE", "A8"  : REMark Skeleton A
+2260 DATA "00", "00", "00", "00", "0A", "45", "45", "45", "2A"  : REMark B
+2270 DATA "00", "00", "00", "00", "80", "40", "60", "50", "BE"  : REMark C = ABC
+2280 :
+2290 DATA "00", "7F", "FF", "FF", "FF", "FF", "FF", "38", "07"  : REMark stone A
+2300 DATA "00", "FC", "FE", "FA", "FA", "E2", "02", "04", "F8"  : REMark stone B = AB
+2310 DATA "00", "3C", "3E", "7A", "FA", "F2", "C6", "7C", "00"  : REMark stone C
+2320 DATA "00", "3C", "7E", "7A", "72", "64", "3C", "00", "00"  : REMark stone D
+
 
 
