@@ -1,23 +1,23 @@
-4000 REMark ----------------------------------------
-4010 REMark Random choose a word in the DATA
-4020 REMark ----------------------------------------
-4030 DEFine FuNction PICKWORD$
-4040   LOCal i, n, idx, w, s, e, p
-4050   s = 5000
-4060   e = 5010
-4070   p = 10
-4080   w = 6
-4090   n = RND(0 TO (e - s) / p) * p + s
-4100   idx = RND(1 TO w)
-4110   RESTORE n
-4120   FOR i = 1 TO idx
-4130     READ w$
-4140   END FOR i
-4150   RETurn w$
-4160 END DEFine PICKWORD
-4970 REMark ----------------------------------------
-4980 REMark Here your words 6 per ligne
-4990 REMark ----------------------------------------
-5000 DATA "HELLO", "WORLD", "RPUFOS", "TOTO", "TITI", "TATA"
-5010 DATA "OLIPIX", "OLIVIER", "VINCENT", "VOITURE", "CAMION", "AVION"
-5020 REMark Copy this file and put Words
+30000 REMark ----------------------------------------
+30010 REMark Random choose a word in the DATA
+30020 REMark ----------------------------------------
+30030 DEFine FuNction f_pickword$
+30040   LOCal i, n, idx, w, s, e, p
+30050   s = 5000
+30060   e = 5010
+30070   p = 10
+30080   w = 6
+30090   n = RND(0 TO (e - s) / p) * p + s
+30100   idx = RND(1 TO w)
+30110   RESTORE n
+30120   FOR i = 1 TO idx
+30130     READ w$
+30140   END FOR i
+30150   RETurn w$
+30160 END DEFine f_pickword$
+30170 REMark ----------------------------------------
+30180 REMark Here your words 6 per ligne
+30190 REMark ----------------------------------------
+30200 DATA "HELLO", "WORLD", "RPUFOS", "TOTO", "TITI", "TATA"
+30210 DATA "OLIPIX", "OLIVIER", "VINCENT", "VOITURE", "CAMION", "AVION"
+30220 REMark Copy this file and put Words
