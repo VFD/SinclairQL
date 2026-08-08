@@ -43,7 +43,16 @@
 520    = REMAINDER : PRINT #0,"SYNTAXE ERROR... AI failed": STOP
 530  END SELect 
 540 : REMark test mot$ = "", retry
-550 mot$ = f_pickword$ : mot2$ = f_hide_word$ (mot$)
+550 remark mot$ = f_pickword$ : 
+551 : 
+552 : repeat mot
+553 :   mot$ = f_pickword$
+554 :   if mot$ <> "" : exit mot
+555 : end repeat mot
+556 : 
+557 : mot2$ = f_hide_word$ (mot$)
+558 : 
+559 : 
 560 :
 570 p_screen 3 : PAUSE 50
 580 :
@@ -73,14 +82,14 @@
 802 :    pause
 810 :    PRINT #0,"Vous perdez, Olipix est"\"reprogramme en 8 bits."
 820 : ELSE 
-830 :   CSIZE #0,3,1: PRINT #0,"Vous Gagnez, Olipix est libre."
+830 :   CSIZE #0,3,1: PRINT #0," Vous Gagnez, Olipix est libre."
 840 : END IF 
 850 :
 860 :
 870 :PAUSE
 880 :
 890   REPeat again
-900     CLS #0: PRINT #0,"Veux tu rejouer (O,N) ?"
+900     CLS #0: PRINT #0,"    Veux tu rejouer (O,N) ?"
 910     r$ = f_letter$
 920     IF r$ = "N" : p_reset cha : STOP
 930     IF r$ = "O" : EXIT again
@@ -149,7 +158,7 @@
 1560 :
 1570 :
 1580 REMark ----------------------------------------
-1590 REMark Explications du jeu
+1590 REMark Explications du jeu (char bug because of font)
 1600 REMark   ch: channel
 1610 REMark ----------------------------------------
 1620 DEFine PROCedure p_how_to (ch)
@@ -180,7 +189,7 @@
 1870   REMark Convertion a-z vers A-Z
 1880   IF C>=97 AND C<=122: C=C-32
 1890   REMark Refaire si pas A-Z
-1900   IF C<65 OR C>90: p_beep_echec: GO TO 1830
+1900   IF C<65 OR C>90: p_beep_echec: GO TO 1830: REMark need avoid goto
 1910   :
 1920   l$=CHR$(C)
 1930   dummy=KEYROW(0): RETurn l$
@@ -220,7 +229,7 @@
 2270 DEFine PROCedure p_start (ch)
 2280   MODE 4
 2290   OPEN #ch,scr_
-2300   WINDOW #ch,512,256, 0,0: SCALE #3,256, 0,0
+2300   WINDOW #ch,512,256, 0,0: SCALE #ch,256, 0,0
 2310   CSIZE #ch, 1,0 : REMark basic size for font 8x9
 2320   PAPER #ch,0 : CLS #ch
 2330 END DEFine p_start
