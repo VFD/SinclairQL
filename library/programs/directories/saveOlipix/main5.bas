@@ -320,4 +320,5 @@
 3180   return m$
 3190 DATA "Ah! Ah!","mmmmm......",":-) nice ...","ouh ! ouh ! "
 3200 end define f_ahah$
+3210 :
 30000 : REMark if not exist the program bug
