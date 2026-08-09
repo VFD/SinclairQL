@@ -20,14 +20,12 @@ L'IA a converti convenablement le source de Logi'Stick pour l'adapter au QL.\
 Avec fonctions et procédures.
 
 La suite c'était un travail de restructuration et d'affichage pour rendre le jeu un peu plus sympa.\
-En particulier les fonction dans "p_rpufos_logo", qui trace le logo un peut où on veut avec possibilité de SCALE du logo.\
+En particulier les fonctions dans "p_rpufos_logo", qui trace le logo un peut où on veut avec possibilité de SCALE du logo.\
 D'où l'usage de MERGE juste après l'affichage du titre.
 
 ### TO DO
 
-
 - Fichier BOOT
-- FILL des logos
 - Boutons complet dans les logos
 
 
@@ -35,7 +33,7 @@ D'où l'usage de MERGE juste après l'affichage du titre.
 
 Ça reste un bon jeu avec 4 gros pixels comme les aime Olipix :-)
 
-Les logos RPUFOS ne sont pas remplis car la fonction FILL du QL est très médiocre.\
-Sans doute un update plus tard.
+Les logos RPUFOS ne sont pas remplis je ne l'ai pas jugé nécessaire.\
+Le design reste ainsi simple et non surchargé.
 
 ___
