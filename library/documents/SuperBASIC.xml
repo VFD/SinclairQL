@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NotepadPlus>
+    <UserLang name="superBASIC" ext="" udlVersion="2.1">
+        <Settings>
+            <Global caseIgnored="yes" allowFoldOfComments="no" foldCompact="no" forcePureLC="0" decimalSeparator="0" />
+            <Prefix Keywords1="no" Keywords2="no" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
+        </Settings>
+        <KeywordLists>
+            <Keywords name="Comments">00REMark 01 02 03 04</Keywords>
+            <Keywords name="Numbers, prefix1" />
+            <Keywords name="Numbers, prefix2" />
+            <Keywords name="Numbers, extras1" />
+            <Keywords name="Numbers, extras2" />
+            <Keywords name="Numbers, suffix1" />
+            <Keywords name="Numbers, suffix2" />
+            <Keywords name="Numbers, range" />
+            <Keywords name="Operators1"># &lt; &gt; &lt;&gt; = == &lt;= &gt;= : ! \ ( ) , ; &amp; &amp;&amp; || ^^ ~~ ^ + - * /</Keywords>
+            <Keywords name="Operators2">AND OR NOT DIV MOD INSTR XOR</Keywords>
+            <Keywords name="Folders in code1, open" />
+            <Keywords name="Folders in code1, middle" />
+            <Keywords name="Folders in code1, close" />
+            <Keywords name="Folders in code2, open" />
+            <Keywords name="Folders in code2, middle" />
+            <Keywords name="Folders in code2, close" />
+            <Keywords name="Folders in comment, open" />
+            <Keywords name="Folders in comment, middle" />
+            <Keywords name="Folders in comment, close" />
+            <Keywords name="Keywords1">ADATE
+ARC
+ARC_R
+AT
+AUTO
+BAUD
+BEEP
+BLOCK
+BORDER
+CALL
+CIRCLE
+CIRCLE_R
+CLEAR
+CLOSE
+CLS
+CONTINUE
+COPY
+COPY_N
+CSIZE
+CURSOR
+DATA
+DATE
+DEFine FuNction
+DEFine PROCedure
+DELETE
+DIM
+DIR
+DLINE
+EDIT
+END DEFine
+END FOR
+END REPeat
+END SELect
+EOF
+EXEC
+EXEC_W
+EXIT
+FILL
+FLASH
+FOR
+FORMAT
+GOSUB
+GOTO
+IF
+INK
+INPUT
+KEYROW
+LBYTES
+LET
+LINE
+LINE_R
+LIST
+LOAD
+LOCAL
+LRUN
+MERGE
+MODE
+MOVE
+MRUN
+NET
+NEW
+NEXT
+ON…GOSUB
+ON…GOTO
+OPEN
+OPEN_IN
+OPEN_NEW
+OVER
+PAN
+PAPER
+PAUSE
+PEEK
+PEEK_L
+PEEK_W
+PENDOWN
+PENUP
+POINT
+POINT_R
+POKE
+POKE_L
+POKE_W
+PRINT
+RAD
+RANDOMISE
+READ
+RECOL
+REMark
+RENUM
+REPeat
+RESPR
+RESTORE
+RETRY
+RETURN
+RUN
+SAVE
+SBYTES
+SCALE
+SCROLL
+SDATE
+SELect
+SEXEC
+STOP
+STRIP
+THEN
+TRA
+TURN
+TURNTO
+UNDER
+WIDTH
+WINDOW</Keywords>
+            <Keywords name="Keywords2">ABS
+ACOS
+ACOT
+ASIN
+ATAN
+BEEPING
+CODE
+COS
+COT
+DEG
+DIMN
+DIV
+EOF
+EXP
+INSTR
+INT
+LEN
+LN
+LOG 10
+MOD
+PI
+RND
+RESPR
+SIN
+SQRT
+TAN</Keywords>
+            <Keywords name="Keywords3">DATE$
+DAY$
+CHR$
+FILL$
+INKEY$</Keywords>
+            <Keywords name="Keywords4">AJOB
+ALARM
+ALCHP
+ALTKEY
+BGET
+BIN
+BIN$
+BPUT
+CDEC$
+CHAR_INC
+CHAR_USE
+CLCHP
+CLOCK
+CLOSE
+CONTINUE
+COPY
+COPY_H
+COPY_N
+COPY_O
+CURDIS
+CURSEN
+DATAD$
+DATA_USE
+DDOWN
+DEL_DEFB
+DELETE
+DESTD$
+DEST_USE
+DIR
+DLIST
+DNEXT
+DO
+DUP
+ED
+ET
+EW
+EX
+EXEC
+EXEC_W
+EXTRAS
+FDAT
+FDEC$
+FEXP$
+FLEN
+FLUSH
+FNAME$
+FOP_DIR
+FOPEN
+FOP_IN
+FOP_NEW
+FOP_OVER
+FPOS
+FREE_MEM
+FTEST
+FTYP
+FUPDT
+FXTRA
+GET
+HEX
+HEX$
+IDEC$
+JOB$
+JOBS
+LBYTES
+LOAD
+LRESPR
+LRUN
+MERGE
+MRUN
+NEW
+NFS_USE
+NXJOB
+OJOB
+OPEN
+OPEN_DIR
+OPEN_IN
+OPEN_NEW
+OPEN_OVER
+PARNAM$
+PARSTR$
+PARTYP
+PARUSE
+PJOB
+PRINT_USING
+PROGD$
+PROG_USE
+PUT
+RECHP
+RENAME
+REPORT
+RETRY
+RJOB
+SAVE
+SAVE_O
+SBYTES
+SBYTES_O
+SEXEC
+SEXEC_O
+SPJOB
+SPL
+SPLF
+SPL_USE
+STAT
+STOP
+TK2_EXT
+TRUNCATE
+VIEW
+WCOPY
+WDEL
+WDIR
+WMON
+WREN
+WSTAT
+WTV</Keywords>
+            <Keywords name="Keywords5" />
+            <Keywords name="Keywords6" />
+            <Keywords name="Keywords7" />
+            <Keywords name="Keywords8">MISTake
+</Keywords>
+            <Keywords name="Delimiters">00" 01 02" 03' 04 05' 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23</Keywords>
+        </KeywordLists>
+        <Styles>
+            <WordsStyle name="DEFAULT" fgColor="FFFF80" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="COMMENTS" fgColor="808080" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="LINE COMMENTS" fgColor="008040" bgColor="FFFFFF" colorStyle="1" fontStyle="2" nesting="0" />
+            <WordsStyle name="NUMBERS" fgColor="80FFFF" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS1" fgColor="FFFF00" bgColor="FFFFFF" colorStyle="1" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS2" fgColor="FFFF00" bgColor="FFFFFF" colorStyle="1" fontStyle="3" nesting="0" />
+            <WordsStyle name="KEYWORDS3" fgColor="FFFF00" bgColor="FFFFFF" colorStyle="1" fontStyle="3" nesting="0" />
+            <WordsStyle name="KEYWORDS4" fgColor="FF8000" bgColor="FFFFFF" colorStyle="1" fontStyle="3" nesting="0" />
+            <WordsStyle name="KEYWORDS5" fgColor="FFFF00" bgColor="FFFFFF" colorStyle="1" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS6" fgColor="FFFF00" bgColor="FFFFFF" colorStyle="1" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS7" fgColor="FF0000" bgColor="FFFFFF" colorStyle="1" fontStyle="3" nesting="0" />
+            <WordsStyle name="KEYWORDS8" fgColor="FF0000" bgColor="FFFFFF" colorStyle="1" fontStyle="3" nesting="0" />
+            <WordsStyle name="OPERATORS" fgColor="00FF80" bgColor="FFFFFF" colorStyle="1" fontStyle="1" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE1" fgColor="000000" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE2" fgColor="000000" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN COMMENT" fgColor="000000" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS1" fgColor="80FFFF" bgColor="FFFFFF" colorStyle="1" fontStyle="1" nesting="0" />
+            <WordsStyle name="DELIMITERS2" fgColor="80FFFF" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS3" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS4" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS5" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS6" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS7" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS8" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+        </Styles>
+    </UserLang>
+</NotepadPlus>
