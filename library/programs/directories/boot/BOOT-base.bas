@@ -1,7 +1,8 @@
 100 REMark ------------------------------
 110 REMark         A simple BOOT
 111 REMark       to manage them all
-112 REMark ------------------------------
+112 REMark need improvment
+113 REMark ------------------------------
 120 :
 130 prog$ = "prog_bas": REMark Put right name here
 140 :
