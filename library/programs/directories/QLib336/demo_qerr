@@ -1,0 +1,30 @@
+1000 DEFine FuNction Q_Err$
+1010 REMark demo_qerr
+1020   LOCal e
+1030   e=Q_ERR
+1040   SELect ON e
+1050     =0  : RETurn ""
+1060     =-1 : RETurn "not complete"
+1070     =-2 : RETurn "invalid job"
+1080     =-3 : RETurn "out of memory"
+1090     =-4 : RETurn "out of range"
+1100     =-5 : RETurn "buffer overflow"
+1110     =-6 : RETurn "channel not open"
+1120     =-7 : RETurn "not found"
+1130     =-8 : RETurn "already exists"
+1140     =-9 : RETurn "in use"
+1150     =-10: RETurn "end of file"
+1160     =-11: RETurn "drive full"
+1170     =-12: RETurn "bad name"
+1180     =-13: RETurn "transmission error"
+1190     =-14: RETurn "format failed"
+1200     =-15: RETurn "bad parameter"
+1210     =-16: RETurn "file error"
+1220     =-17: RETurn "error in expression"
+1230     =-18: RETurn "arithmetic overflow"
+1240     =-19: RETurn "not implemented"
+1250     =-20: RETurn "read only"
+1260     =-21: RETurn "bad line"
+1270     =REMAINDER : RETurn "error "&e
+1280   END SELect 
+1290 END DEFine 

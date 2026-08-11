@@ -1,4 +1,4 @@
-# BOOT file
+# BOOT files
 
 
 ## Introduction

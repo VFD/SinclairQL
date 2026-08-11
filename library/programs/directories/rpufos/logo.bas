@@ -43,7 +43,7 @@
 8060 :
 8070 DEFine PROCedure p_rpufos_logo (ch, x0, y0, c)
 8080   :
-8090   REMark PRINT #0,"channel ";c ! "ink ";c
+8090   REMark PRINT #0,"channel ";ch ! "ink ";c
 8100   INK #ch,c
 8110   :
 8120   REMark left down, blue
@@ -52,7 +52,7 @@
 8150   LINE_R #ch TO -13,0 TO -4,4 TO -6,0 TO -2,-2 TO -1,0
 8160   LINE_R #ch TO -1,-1 TO 0,-1 TO 1,-1 TO -1,-1 TO 0,-1
 8170   LINE_R #ch TO 1,-1 TO -1,-1 TO 0,-1 TO 1,-1 TO 0,-1 TO 1,-1
-8180   REMark thumb
+8180   REMark thumb blue
 8190   POINT #ch,x0+1,y0+11 : LINE_R #ch TO 6,0
 8200   :
 8210   REMark left up, red
@@ -61,7 +61,7 @@
 8240   LINE_R #ch TO 0,13 TO 4,4 TO 0,6 TO -2,2 TO 0,1
 8250   LINE_R #ch TO -1,1 TO -1,0 TO -1,-1 TO -1,1 TO -1,0
 8260   LINE_R #ch TO -1,-1 TO -1,1 TO -1,0 TO -1,-1 TO -1,0 TO -1,-1
-8270   REMark thumb
+8270   REMark thumb red
 8280   POINT #ch,x0+11,y0+39 : LINE_R #ch TO  0,-6
 8290   :
 8300   REMark right up, yellow
@@ -70,7 +70,7 @@
 8330   LINE_R #ch TO 13,0 TO 4,-4 TO 6,0 TO 2,2 TO 1,0
 8340   LINE_R #ch TO 1,1 TO 0,1 TO -1,1 TO 1,1 TO 0,1
 8350   LINE_R #ch TO -1,1 TO 1,1 TO 0,1 TO -1,1 TO 0,1 TO -1,1
-8360   REMark thumb
+8360   REMark thumb yellow
 8370   POINT #ch,x0+39,y0+29 : LINE_R #ch TO -6,0
 8380   :
 8390   REMark right down, magenta
@@ -79,7 +79,7 @@
 8420   LINE_R #ch TO 0,-13 TO -4,-4 TO 0,-6 TO 2,-2 TO 0,-1
 8430   LINE_R #ch TO 1,-1 TO 1,0 TO 1,1 TO 1,-1 TO 1,0
 8440   LINE_R #ch TO 1,1 TO 1,-1 TO 1,0 TO 1,1 TO 1,0 TO 1,1
-8450   REMark thumb
+8450   REMark thumb magenta
 8460   POINT #ch,x0+29,y0+1 : LINE_R #ch TO  0,6
 8470   :
 8480 END DEFine p_rpufos_logo

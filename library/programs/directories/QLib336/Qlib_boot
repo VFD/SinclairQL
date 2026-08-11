@@ -1,0 +1,45 @@
+100 td$='flp1_'
+110 REMark Q_Liberator Boot 3.36
+120 REMark Copyright 1991 Liberation Software
+130 :
+140 PRINT #0,"Q_Liberator Loading ..."
+150 :
+160 REMark ** Load Qlib system **
+170 REMark Contains all of the files
+180 REMark Qlib_bin,Qlib_run,Qlib_ext,Qlib_ovl
+190 REMark Produced using RPM, control file for
+200 REMark RPM is QLIB_rpm
+210 :
+220 a=RESPR(16008)
+230 LBYTES td$&'Qlib_sys',a : CALL a
+240 :
+250 GO TO 500
+260 :
+270 REMark +++++++ Files can also be loaded individually ++++++++++++++
+280 :
+290 REMark ** Load Phase 1 of compiler **
+300 REMark contains LIBERATE QX QW QX_JOB0
+310 REMark GLOBAL DEF_INTEGER EXT_PROC EXT_FN
+320 REMark QLIB_USE
+330 :
+340 a=RESPR(2910)
+350 LBYTES td$&'Qlib_bin',a : CALL a
+360 :
+370 REMark ** Load runtime system **
+380 a=RESPR(10552)
+390 LBYTES td$&'Qlib_run',a : CALL a
+400 :
+410 REMark ** Load OVERLAY and UNLOAD **
+420 a=RESPR(1006)
+430 LBYTES td$&'Qlib_ovl',a : CALL a
+440 :
+450 REMark ** Load SuperBASIC extensions **
+460 REMark QERR QJ etc
+470 a=RESPR(1472)
+480 LBYTES td$&'Qlib_ext',a : CALL a
+490 :
+500 REMark   If ROM version AH or JM we must merge
+510 REMark   BOOT_USE to set QLIB_USE defaults.
+520 REMark   With JS and later ROMS we can include
+530 REMark   a QLIB_USE call in the same program.
+540 :

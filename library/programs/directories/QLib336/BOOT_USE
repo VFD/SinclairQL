@@ -1,0 +1,4 @@
+1000 REMark SET DEFAULTS FOR Q_Liberator
+1010 REMark   Compiler load device, Help file device
+1020 QLIB_USE flp1_,flp1_
+1030 Q_L

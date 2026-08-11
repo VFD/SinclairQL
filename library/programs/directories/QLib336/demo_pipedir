@@ -1,0 +1,58 @@
+100 REMark      Sorted directory
+110 :
+120 REMark    Demonstration of PIPE
+130 REMark     as a memory buffer
+140 :
+150 REMark 1986 Liberation Software
+160 :
+170 REMark  Array to hold entries
+180 DIM d$(200,40)
+190 :
+200 REMark  Open both ends of pipe
+210 OPEN #4,pipe_8000
+220 Q_PIPE #4 TO #3
+230 :
+240 CLS: PRINT "Sorted directory"
+250 INPUT "Device : ";dev$
+260 IF dev$="" THEN dev$='FLP1_'
+265 INPUT "Target : ";tar$
+267 IF tar$="" THEN tar$='scr_'
+268 OPEN #5;tar$: CLS #5
+270 :
+280 REMark  Send directory into pipe
+300 DIR #4,flp1_
+330 :
+340 REMark  Close causes EOF
+350 CLOSE #4
+360 :
+370 REMark  Read back entries
+380 count%=0
+381 INPUT #3,media$
+382 INPUT #3,sect$
+390 REPeat readback
+400   IF EOF(#3) THEN EXIT readback
+410   count%=count%+1
+420   INPUT #3,d$(count%)
+430 END REPeat readback
+440 :
+450 REMark  Sort and print array
+460 sort d$,count%
+465 PRINT #5,media$\sect$
+470 PRINT #5;d$(1 TO count%)
+480 :
+490 REMark Variation of SORT
+500 REMark described in DEMO_SORT
+510 :
+520 DEFine PROCedure sort(ara,max)
+530   IF max<2 THEN RETurn 
+540   FOR item=2 TO max
+550     p%=item
+560     ara(0)=ara(p%)
+570     REPeat compare
+580       IF ara(0)>=ara(p%-1):EXIT compare
+590       ara(p%)=ara(p%-1)
+600       p%=p%-1
+610     END REPeat compare
+620     ara(p%)=ara(0)
+630   END FOR item
+640 END DEFine 

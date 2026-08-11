@@ -1,0 +1,145 @@
+100   SCReen_init
+110   intro
+120   REMark CREATE AND SORT INTEGER ARRAY
+130   PRINT #4;"Creating"!max!"random integers"
+140   DIM integer%(max)
+150   randnum integer%
+160   start_time=DATE
+170   sort integer%
+180   time_i =DATE-start_time
+190   PRINT #4; "Integer array sorted in ";time_i!" seconds"
+200   print_array integer%
+210   :
+220   wait
+230   REMark CREATE AND SORT FLOATING POINT ARRAY
+240   PRINT #4;"Creating"!max!"random floats"
+250  DIM float(max)
+260  randnum float
+270  start_time=DATE
+280  sort float
+290  time_f=DATE-start_time
+300  PRINT #4; "Float array sorted in ";time_f!"seconds"
+310  print_array float
+320 :
+330  wait
+340  REMark CREATE AND SORT NUMERIC STRING ARRAY
+350  PRINT #4;"Creating"!max!"random numeric strings"
+360  DIM string$(max,4)
+370  randnum string$
+380  start_time=DATE
+390  sort string$
+400  time_n=DATE-start_time
+410  PRINT #4;"String array sorted in ";time_n!"seconds"
+420  print_array string$
+430  :
+440  wait
+450  REMark CREATE AND SORT ALPHA STRING ARRAY
+460  PRINT #4;"Creating"!max!"random alpha strings"
+470  randchar string$
+480  start_time=DATE
+490  sort string$
+500  time_a=DATE-start_time
+510  PRINT #4;"Alpha strings sorted in ";time_a;" seconds"
+520  print_array string$
+530  wait
+540  :
+550  REMark PRINT RESULTS
+560  CLS #5: AT #5,2,0
+570  j$="Q_Liberator"
+580  IF Q_MYJOB=0 THEN j$="Interpreter"
+590  PRINT #5,\"     Sort times for"!j$
+600  PRINT #5,\"   Integer array           : ";time_i
+610  PRINT #5,\"   Float point array       : ";time_f
+620  PRINT #5,\"   String array, numeric   : ";time_n
+630  PRINT #5,\"   String array, alpha     : ";time_a
+640  :
+650  STOP
+660 :
+670 DEFine PROCedure print_array(ara)
+680  CLS #5: PRINT #5,ara(1 TO)!
+690 END DEFine print_array
+700 :
+710 DEFine PROCedure randchar(ara)
+720   LOCal i,j
+730   FOR i=1 TO DIMN(ara,1)
+740     FOR j=1 TO DIMN(ara,2)
+750       ara(i,j)=CHR$(RND(65 TO 90))
+760     END FOR j
+770     ara(i,0)=DIMN(ara,2)
+780   END FOR i
+785   CLS #5: PRINT #5,ara(1 TO)!
+790 END DEFine randchar
+800 :
+810 DEFine PROCedure randnum(ara)
+820   LOCal i
+830   FOR i=1 TO DIMN(ara)
+840     ara(i)=RND(1000 TO 9999)
+850   END FOR i
+860   CLS #5: PRINT #5,ara(1 TO)!
+870 END DEFine random
+880 :
+890 DEFine PROCedure SCReen_init
+900   OPEN #3 ;"scr_512X256a0x0"  : REMark clear screen
+910   CLS #3
+920   OPEN #3;"SCR_448x24a32x16"  :  REMark Q_Liberator window
+930   OPEN #4;"CON_448x40a32x200" :  REMark command window
+940   OPEN #5 ;"CON_448x160a32x40": REMark result window
+950   BORDER #3,1,7 : BORDER #4,1,7 : BORDER #5,1,7
+960   PAPER #5,0 : INK #5,4 : CLS #5 : CSIZE #5,2,0
+970   CSIZE #4,2,0
+980   PAPER #3,0 : INK #3,4 : CLS #3
+990   CSIZE #3;3,1 : OVER #3,1
+1000   ql$="Q_Liberator   demo_sort"
+1010   INK #3,2:PRINT #3;ql$;  : CURSOR #3,1,1
+1020   INK #3,4:PRINT #3;ql$;  : CURSOR #3,2,2
+1030 END DEFine 
+1040 :
+1050 DEFine PROCedure intro
+1060   PRINT #5;"This program shows the dramatic"
+1070   PRINT #5;"speed increase which Q_Liberator can"
+1080   PRINT #5;"impart to a program."\\
+1090   PRINT #5;"It creates arrays of random numbers"
+1100   PRINT #5;"or characters and sorts them into"
+1110   PRINT #5;"ascending order."\\
+1120   PRINT #5;"The sort procedure is adapted from"
+1130   PRINT #5;"that described on page 100 of the"
+1140   PRINT #5;"QL User Guide."\\
+1150   PRINT #5;"Note that the one procedure can"
+1160   PRINT #5;"be used to sort any type of array."\\
+1170   INPUT #4;"How many elements (10-100) ";max$
+1180   max=0&max$:
+1190   SELect ON max
+1200     =10 TO 100
+1210     =REMAINDER : max=100
+1220   END SELect 
+1230 END DEFine intro
+1240 :
+1250 DEFine PROCedure sort(ara)
+1260 REMark $$i
+1270 REMark Insertion Sort
+1280   PRINT #4;"Sorting ... "
+1285   BEEP 500,20
+1290   IF DIMN(ara)<2 THEN RETurn 
+1300   FOR item=2 TO DIMN(ara)
+1310     p%=item
+1320     ara(0)=ara(p%)
+1330     REPeat compare
+1340       IF ara(0)>=ara(p%-1):EXIT compare
+1350       ara(p%)=ara(p%-1)
+1360       p%=p%-1
+1370     END REPeat compare
+1380     ara(p%)=ara(0)
+1390   END FOR item
+1400   CLS #4
+1410 REMark $$f
+1420 END DEFine 
+1430 :
+1440 DEFine PROCedure wait
+1450   PRINT #4,\"Hit space to continue"
+1460   BEEP 500,20
+1470   REPeat waiting
+1480     IF KEYROW(1)=64 THEN EXIT waiting
+1490   END REPeat waiting
+1500   CLS #4
+1510 END DEFine wait
+1520 :

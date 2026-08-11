@@ -1,0 +1,23 @@
+10  REMark DEMO_PAGER
+20  REMark 
+30  pagesize=72
+100 l=0: p=1
+105 TITLE
+110 REPeat page
+115  IF EOF(#0) THEN formfeed: STOP
+120  INPUT #0,a$
+130  IF a$=".pa" THEN 
+140   formfeed: TITLE
+150  ELSE 
+160   PRINT #1,a$: l=l+1
+170   IF l>pagesize-10 THEN formfeed:TITLE
+180  END IF 
+190 END REPeat page
+200 :
+210 DEFine PROCedure formfeed
+220  PRINT CHR$(12);:p=p+1: l=0
+230 END DEFine 
+240 :
+250 DEFine PROCedure TITLE
+260  PRINT cmd$,"Page : ";p\\\
+270 END DEFine 

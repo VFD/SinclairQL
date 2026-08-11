@@ -1,0 +1,14 @@
+100 REMark MULTITASKING DEMONSTRATION
+105 :
+107 REMark DEMO_MULTI
+108 :
+110 j=Q_MYJOB: REMark see chapter 12
+120 REPeat loop
+130   AT j,0:PRINT FILL$(" ",20)
+140   AT j,0
+150   INPUT ("JOB "&j&">");a
+160   IF a=0 THEN STOP
+170   FOR x=1 TO a
+180     AT j,15: PRINT x
+190   END FOR x
+200 END REPeat loop

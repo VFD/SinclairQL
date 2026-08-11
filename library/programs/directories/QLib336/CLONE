@@ -1,0 +1,89 @@
+100 OPEN #3,con_480x180a20x20
+110 BORDER #3,2,2: INK #3,7: CLS #3
+120 PRINT #3,"  Q_Liberator Release 3.35 Clone "\\
+130 PRINT #3," For best results with microdrives,"\" create the working copy in the"\" drive in which you intend to use it."\\
+140 REPeat get_master
+150  INPUT #3," Device containing Master (flp1_) ";sd$
+160  IF sd$="" THEN sd$="flp1_"
+170  IF valid(sd$) THEN EXIT get_master
+180 END REPeat get_master
+190 :
+200 REPeat get_work
+210  INPUT #3," Device for working copy  (flp2_) ";td$
+220  IF td$=""  THEN td$="flp2_"
+230  IF sd$=td$ THEN PRINT #3," Cannot be the same device": NEXT get_work
+240  IF valid(td$) THEN EXIT get_work
+250 END REPeat get_work
+260 :
+270 REPeat get_load
+280  INPUT #3," Load device for QLIB_OBJ (";(td$);") ";ld$
+290  IF ld$='' THEN ld$=td$
+300  IF valid(ld$) THEN EXIT get_load
+310 END REPeat get_load
+320 :
+330 INPUT #3," Format first ?              (no) ";form$
+340 INPUT #3," Copy demo programs ?        (no) ";d$
+350 INPUT #3," Create standard BOOT       (yes) ";b$
+360 INPUT #3," Copy individual extensions  (no) ";sys$
+370 PRINT #3
+380 :
+390 RESTORE  930
+400 :
+410 IF form$=='y' THEN FORMAT td$&'Qlib 3.35'
+420 IF sys$=='y' THEN RESTORE
+430 REPeat copy_qlib
+440   READ f$
+450   IF f$(1 TO 4)=="demo" THEN EXIT copy_qlib
+460   PRINT #3," Copying ";sd$&f$;" to ";td$&f$
+470   COPY sd$&f$ TO td$&f$
+480 END REPeat copy_qlib
+490 :
+500 d$=d$&' '
+510 IF d$(1)=="y" THEN
+520   REPeat copy_demo
+530     PRINT #3," Copying ";sd$&f$;" to ";td$&f$
+540     COPY sd$&f$ TO td$&f$
+550     IF EOF THEN EXIT copy_demo
+560     READ f$
+570   END REPeat copy_demo
+580 END IF
+590 :
+600 b$=b$&' '
+610 IF NOT b$(1)=="n" THEN
+620   PRINT #3," Copying ";sd$&'qlib_boot';" to ";td$&'boot'
+630   OPEN #4,sd$&"qlib_boot"
+640   OPEN_NEW #5,td$&'BOOT'
+650   INPUT #4,r$:r=r$
+660   PRINT #5,r;" td$='";ld$;"'"
+670   REPeat copy_boot
+680     IF EOF(#4) THEN EXIT copy_boot
+690     INPUT #4,r$
+700     PRINT #5,r$
+710   END REPeat copy_boot
+720   IF VER$='JM' OR VER$='AH' THEN
+730     PRINT #5,1000;" LRUN ";td$&"boot_use"
+740     CLOSE #5
+750     PRINT #3,"Creating "&td$&"BOOT_USE"
+760     OPEN_NEW #5,td$&'BOOT_USE'
+770   END IF
+780   PRINT #5,1000;" QLIB_USE ";ld$;',';ld$
+790   CLOSE #4
+800   CLOSE #5
+810 END IF
+820 PRINT #3;" Clone complete"
+830 CLOSE #3
+840 :
+850 DEFine FuNction valid(dev$)
+860  IF LEN(dev$)<5 OR LEN(dev$)>10 THEN PRINT #3," Length must be 5-10 characters": RETurn 0
+870  RETurn 1
+880 END DEFine valid
+890 :
+900 DATA "QLib_bin","QLib_ext","QLib_run"
+910 DATA "QLib_ovl"
+920 :
+930 DATA "QLib_sys","QLib_obj","QLib_help"
+940 DATA "QLib_patch_obj"
+950 :
+960 DATA "demo_input","demo_multi"
+970 DATA "demo_pager","demo_pipedir"
+980 DATA "demo_qerr","demo_sort"

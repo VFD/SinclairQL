@@ -1,0 +1,130 @@
+                    Q_Liberator Release Notes
+                    -------------------------
+
+This document describes the changes to Q_Liberator since the last printed
+edition of the manual (Rel 3.30).
+
+
+RELEASE 3.31 June 1990
+----------------------
+
+ERROR CONSOLE
+
+Under some rare program error conditions, earlier versions of Qlib had 
+difficulty reporting errors. Release 3.31 has changed the error handling
+so that an error message always appears somewhere, and usually on the
+error console. The sequence when an error occurs is as follows:  
+
+The runtime system first attempts to open a console window with 
+parameters CON_480x36a16x160. The screen contents beneath this window are
+saved, ie it 'pops up'. (With Minerva this window will be on the current 
+default screen). If the open operation fails then the job's channel 2 is 
+used to report errors, if it exists. If it does not, then SuperBASIC's 
+channel 2 is used and failing that, channel id 0.
+
+Note that when using the QJump extended environment the shape of 
+the error console may change if OUTLN has been used to define a primary 
+window which cannot encompass the standard error console. 
+
+COMPILER CONFIGURATION
+
+Users who have a copy of the QJump level 1 configurator, config, can now 
+use this utility to modify the compiler, QLIB_OBJ. The colour sheme and 
+various compiler defaults including stack, heap, and buffer size can 
+be configured.
+
+WHEN VARIABLE   
+
+Under the interpreter, a watched variable cannot trigger a WHEN clause as
+the result of an assigment through a READ or INPUT operation. This 
+behaviour though inconvenient is replicated in Q_Liberator for the sake of
+compatibility. If you want to trigger a WHEN clause on a keyboard input 
+assign the variable to itself immediately afterwards:
+
+          INPUT X
+          X=X                 REMark may trigger when
+
+PROGRAM STRUCTURE
+
+It is not possible to use EXIT to leave a REPeat or FOR loop from within 
+a WHEN clause as the 'during WHEN processing' state is never left. Thus 
+the following program structure though possible under the interpreter is
+considered illegal under Q_Liberator.
+
+          WHEN x=5 
+           EXIT loop
+          END WHEN
+          x=1
+          REPeat loop
+           x=x+1
+          END REPeat loop
+
+
+RELEASE 3.32   September 1990
+-----------------------------
+
+MINERVA INTEGER TOKENISATION
+
+Minerva versions from 1.79 onwards introduced integer tokens to the internal
+format of a SuperBASIC program  resulting in faster and more efficient
+interpreted code.  Q_Liberator release 3.32 will now correctly process
+such programs giving similar performance benefits to compiled programs
+(regardless of which  ROM they are executed on). This feature effectively
+renders the $$i and $$f directives as obsolete.
+
+The changes to support integer tokenisation include the LIBERATE command in
+the file QLib_bin which generates the work file. If you wish to compile
+directly from QLOAD files (_sav) then QLOAD version 1.7 is needed.
+
+
+RELEASE 3.33   September 1990
+-----------------------------
+
+Bug in QLIB_OBJ not releasing memory after compilation corrected.
+
+Bug in QLIB_OBJ with TRACE on and REMarks at start of file corrected.
+
+QLIB_PATCH recompiled to allow resident use with Minerva & MultiBASIC.
+
+
+RELEASE 3.34   November 1990
+----------------------------
+
+Parameter passing from compiled code to free running procedures corrected.
+
+Bug introduced in 3.32 which stopped overlays working from compiled code 
+corrected. 
+
+
+RELEASE 3.35   April 1991
+-------------------------
+
+Removal of runtime error which occasionally caused premature reporting of 
+EOF when processing lines with multiple DATA statements.
+
+Path name for QLIB_OBJ and QLIB_HELP extended to 26 characters to allow
+greater flexibility for winchester users.
+
+Bug in QLIB_OBJ with TRACE on and Define integer corrected.
+
+Bug in QLIB_OBJ with entry of object filenames without the extension '_obj'.
+
+Warning now given if REM $$on / REM $$off out of sequence.
+
+Compiler stack changed from 1500 to 5500 to allow it to compile the PSION
+INSTALL_BAS without having to run Qlib_patch on the compiler.
+
+Bug in QLIB_OBJ in setting stack size fixed.
+
+Bug fixed in QLIB_PATCH when loaded as resident procedure.
+
+Release 3.36   January 1993
+---------------------------
+
+Corrected a bug in INSTR which occasionally returned a positive  result when
+in fact no match was found.
+
+Improvement to set up of basic variables area to tolerate poorly written 
+machine code extensions.
+
+_________________ End of File ____________________

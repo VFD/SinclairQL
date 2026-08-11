@@ -1,0 +1,20 @@
+100 REMark DEMONSTRATION OF ERROR TRAPPING
+110 REMark demo_input
+120 :
+130 REPeat demo
+140   numinput x
+150   PRINT x
+160 END REPeat demo
+170 :
+180 DEFine PROCedure numinput(n)
+190   Q_ERR_ON "INPUT"
+200   REPeat getnum
+210     INPUT "Number >";n
+220     IF Q_ERR=0 THEN EXIT getnum
+230     BEEP 200,10
+240     PRINT
+250     IF Q_ERR=-17 THEN PRINT "Only numbers please"
+260     IF Q_ERR=-5 THEN PRINT "Too many characters"
+270   END REPeat getnum
+280   Q_ERR_OFF "INPUT"
+290 END DEFine numinput

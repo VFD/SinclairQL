@@ -7,7 +7,7 @@ superBASIC.xml
 
 Try for color syntax in notepad++.
 
-- Group 1: Basic
+- Group 1: superBasic standard
 - Group 2: Functions
 - Group 3: Char funcctions ($)
 - Group 4: Toolkit II
@@ -15,11 +15,11 @@ Try for color syntax in notepad++.
 
 Other group (3) free to use.
 
-This is for dark mode.
+This is a try for dark mode.
 
 ## How To
 
-Import the file.
+Import the file in notepad++.
 
 
 ___
