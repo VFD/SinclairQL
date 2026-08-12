@@ -6,10 +6,11 @@
 150 : FOR i = 1 TO 10000: END FOR i
 160 : PRINT DATE$
 170 :
+175 REMark % may help
 180 : FOR i% = 1 TO 10000: END FOR i%
 190 : PRINT DATE$
 200 :
-210 : REMark compil OBJ
+210 : REMark compil OBJ to EXE ?
 220 : REMark EXEC win1_qlib/qlib_bin
 230 : REMark compil EXE
 240 : REMark EXEC win1_qlib/qlib_link
