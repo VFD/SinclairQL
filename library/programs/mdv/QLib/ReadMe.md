@@ -121,7 +121,7 @@ So I use the option 384k.
 
 Qliberator is loaded and ready.
 
-If neede :
+If needed :
 
 ```basic
 100 REMark --------------------------
