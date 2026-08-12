@@ -211,13 +211,45 @@ ___
 Other way, in documentation
 
 ```
-liberate flp2_yourProgram_bas,"-RUN flp2_"
+liberate flp2_yourProgram_bas,"-RUN"
 ```
 
-Runtime will be added, need more experiment.
+Runtime will be added, Qlib_run inside the OBJ.
+
+```
+liberate flp2_yourProgram_bas,"-RUN -NOLINE"
+```
+
+"-NOLINE", reduce the size of the OBJ. Do it after tests an validation.
+
+
+___
+## Directives inside superBASIC
+
+Turn on integer, not very efficient.\
+i% seem to be a good complement.\
+On Minerva this is obsolete.
+
+```
+150 REMark $$i
+```
+
+may be:
+
+```
+10 DEF_INTEGER i,j,k
+```
+
+
+MAX channel in program, if you use less channel use it to reduce size of EXE.
+
+```
+160 REMark $$chan=5
+```
+
+Use them always
+
 
 ___
 
 To be continued...
-
-___
