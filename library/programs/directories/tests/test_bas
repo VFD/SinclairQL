@@ -1,13 +1,13 @@
-100 REMark 
-110 REMark 
-120 REMark 
+100 REMark Qliberator directives
+110 REMark $$i
+120 REMark $$chan=4
 130 :
-140 : print date$
-150 : FOR i = 1 to 10000: END FOR i
-160 : print date$
-170 : 
-180 : FOR i% = 1 to 10000: END FOR i
-190 : print date$
+140 : PRINT DATE$
+150 : FOR i = 1 TO 10000: END FOR i
+160 : PRINT DATE$
+170 :
+180 : FOR i% = 1 TO 10000: END FOR i%
+190 : PRINT DATE$
 200 :
 210 : REMark compil OBJ
 220 : REMark EXEC win1_qlib/qlib_bin
@@ -18,5 +18,3 @@
 270 : REMark
 280 :
 290 :
-
-
