@@ -5,7 +5,7 @@ This is a work in progress not finished.
 ___
 ## Introduction
 
-This is a big DEAL.\
+This is a big DEAL.
 
 Download from [sinclairQL](https://sinclairql.net/djw/qlib/index.html)
 
@@ -13,7 +13,7 @@ Understand Bug : [QLForum](https://theqlforum.com/viewtopic.php?t=5283&hilit=Qli
 
 I download the zip file v3.36.
 
-The first problème is on my system (Win 11) I unzip the file to have a directory.\
+The first problem is on my system (Win 11) I unzip the file to have a directory.\
 Replace all "." by "_".\
 When I mount the directory inside QemuLator, Qlib failed.
 
