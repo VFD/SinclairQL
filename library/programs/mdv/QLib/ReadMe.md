@@ -23,7 +23,7 @@ When I mount the directory inside QemuLator, Qlib failed.
 
 Read the forum thread above.
 
-__
+___
 ## Build a microdrive version
 
 This is how I build it, you have not to do this.\
