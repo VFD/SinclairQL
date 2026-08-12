@@ -20,3 +20,6 @@ RED:   ON
 The name must be the file you want to compile.\
 OBJ, the EXE.
 
+1st try OK\
+2nd try KO...
+
