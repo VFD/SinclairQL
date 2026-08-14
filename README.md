@@ -38,14 +38,21 @@ ___
 
 ### QPC (SMSQ/E)
 
-- [Marcel Kilgus wweb](https://www.kilgus.net/)
+- [Marcel Kilgus web](https://www.kilgus.net/)
 
-### émulateurs
+### SMSQmulator
+
+- [Wolfgang Lenerz's website](https://www.wlenerz.com/smsqmulator/), il faut obligatoirement JAVA.
+
+### Autres émulateurs
 
 - [QemuLator](https://www.terdina.net/ql/q-emulator.html)
 - uQLX (QemuLator version *nix)
-- sQLX
-- MAME
+- [sQLX](https://github.com/SinclairQL/sQLux), problème clavier français
+- [ZEsarUX](https://github.com/chernandezba/zesarux), problème clavier français
+- [MAME](https://www.mamedev.org/)
+
+voir aussi [page Sinclair QL](https://sinclairql.net/djw/emu/index.html).
 
 ### Les ressources des RPUFOS
 
