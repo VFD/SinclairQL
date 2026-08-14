@@ -36,6 +36,9 @@ ___
 - [The Sinclair QL and QDOS compatible systems site](https://morloch.hd.free.fr/qdos/main.html)
 - [The QDOS/SMS software repository](https://morloch.hd.free.fr/smsq/)
 
+### QPC (SMSQ/E)
+
+- [Marcel Kilgus wweb](https://www.kilgus.net/)
 
 ### émulateurs
 
