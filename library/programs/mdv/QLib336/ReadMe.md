@@ -228,7 +228,7 @@ ___
 
 Turn on integer, not very efficient.\
 i% seem to be a good complement.\
-On Minerva this is obsolete.
+On Minerva this will be obsolete?.
 
 ```
 150 REMark $$i
