@@ -46,7 +46,7 @@ ___
 
 ### Autres émulateurs
 
-- [QemuLator](https://www.terdina.net/ql/q-emulator.html)
+- [QemuLator](https://www.terdina.net/ql/q-emulator.html), personnellement le meilleurs mais en Shareware, si ok pour vous n'hésitez pas.
 - uQLX (QemuLator version *nix)
 - [sQLX](https://github.com/SinclairQL/sQLux), problème clavier français
 - [ZEsarUX](https://github.com/chernandezba/zesarux), problème clavier français
